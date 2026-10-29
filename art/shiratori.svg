@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 960" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="ht" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.9" fill="#12100e" opacity="0.5"/>
+    </pattern>
+    <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="55" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="27" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="mono"/>
+      <feComponentTransfer in="mono" result="alpha"><feFuncA type="linear" slope="0.22"/></feComponentTransfer>
+      <feComposite operator="in" in="alpha" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <rect width="640" height="960" fill="#e7decc"/>
+  <circle cx="400" cy="300" r="250" fill="#d8382a" opacity="0.9"/>
+  <circle cx="400" cy="300" r="250" fill="url(#ht)" opacity="0.6"/>
+  <path d="M0 0 L180 0 L80 960 L0 960 Z" fill="#12100e" opacity="0.95" filter="url(#rough)"/>
+  <path d="M150 0 L172 0 L102 960 L64 960 Z" fill="#e7decc" opacity="0.2"/>
+
+  <!-- stage curtains -->
+  <g fill="#12100e" opacity="0.8">
+    <path d="M180 0 L280 0 Q240 260 260 560 L190 520 Q180 250 180 0 Z"/>
+    <path d="M640 0 L520 0 Q560 260 540 560 L620 520 Q630 250 640 0 Z"/>
+  </g>
+
+  <!-- hair behind -->
+  <path d="M184 430 Q150 250 250 180 Q330 126 420 190 Q512 256 474 456 L520 760 L430 700 L402 520 L396 370 L246 370 L236 540 L200 740 L132 690 Z" fill="#12100e" filter="url(#rough)"/>
+
+  <!-- dress -->
+  <g filter="url(#rough)">
+    <path d="M70 960 L70 790 Q70 698 170 660 L250 626 Q270 606 274 560 L386 560 Q392 610 420 632 L506 666 Q590 708 590 800 L590 960 Z" fill="#12100e"/>
+    <path d="M238 650 Q320 690 410 650 L440 960 L220 960 Z" fill="#b8281f"/>
+    <path d="M238 650 Q320 690 410 650 L420 740 L240 740 Z" fill="#d8382a"/>
+    <path d="M240 740 Q320 780 418 740 L430 960 L230 960 Z" fill="#a32219"/>
+  </g>
+  <g stroke="#e7decc" stroke-width="2" opacity="0.3">
+    <path d="M260 760 Q320 790 390 760 M250 830 Q320 860 400 830 M244 900 Q320 930 408 900"/>
+  </g>
+  <!-- neck / chest -->
+  <path d="M268 500 L390 500 L396 580 L264 580 Z" fill="#e7decc"/>
+  <path d="M264 560 Q320 600 396 560 L404 636 Q322 674 256 634 Z" fill="#e7decc"/>
+  <path d="M302 620 L338 620 L348 660 L292 660 Z" fill="#d8382a" opacity="0.8"/>
+  <!-- face -->
+  <path d="M248 320 Q250 234 320 216 Q392 234 398 326 L392 442 Q386 508 324 524 Q262 506 254 442 Z" fill="#e7decc"/>
+  <path d="M248 320 Q250 234 320 216 Q392 234 398 326 L392 442 Q386 508 324 524 Q262 506 254 442 Z" fill="none" stroke="#12100e" stroke-width="5"/>
+  <!-- hair front -->
+  <path d="M236 336 Q214 232 280 188 Q352 148 420 198 Q470 240 462 340 L444 322 Q442 264 406 242 L388 300 L366 246 Q338 292 302 248 L284 304 L264 250 Q240 280 250 338 Z" fill="#12100e" filter="url(#rough)"/>
+  <!-- eyes / smile -->
+  <g fill="#12100e">
+    <path d="M268 352 Q294 338 318 350 L318 358 Q294 348 268 360 Z"/>
+    <path d="M340 350 Q366 338 392 352 L392 360 Q366 348 340 358 Z"/>
+    <ellipse cx="294" cy="366" rx="7" ry="6"/>
+    <ellipse cx="366" cy="366" rx="7" ry="6"/>
+    <path d="M324 374 L318 416 L330 420" fill="none" stroke="#12100e" stroke-width="3"/>
+    <path d="M286 462 Q324 482 362 458 Q346 492 320 490 Q296 488 286 462 Z" fill="#7e241c"/>
+  </g>
+  <path d="M270 344 Q294 330 318 342" stroke="#12100e" stroke-width="3" fill="none"/>
+  <path d="M342 342 Q366 330 392 344" stroke="#12100e" stroke-width="3" fill="none"/>
+
+  <!-- fan -->
+  <g>
+    <path d="M414 572 L556 498 Q600 570 560 640 L424 660 Z" fill="#e7decc" stroke="#12100e" stroke-width="5"/>
+    <g stroke="#12100e" stroke-width="2.5" opacity="0.7">
+      <path d="M436 588 L540 530 M446 610 L552 570 M454 630 L554 610"/>
+    </g>
+    <path d="M430 590 L548 536" stroke="#d8382a" stroke-width="6"/>
+    <circle cx="480" cy="590" r="10" fill="#d8382a"/>
+  </g>
+
+  <!-- fox mask at side -->
+  <g transform="translate(478 250) rotate(12)">
+    <path d="M0 0 L34 -38 L52 2 Q64 64 24 92 Q-16 64 0 0 Z" fill="#e7decc" stroke="#12100e" stroke-width="5"/>
+    <path d="M8 28 Q20 20 30 28 Q22 36 8 28 Z" fill="#12100e"/>
+    <path d="M44 28 Q56 20 66 28 Q58 36 44 28 Z" fill="#12100e"/>
+    <path d="M22 56 Q36 66 50 56" stroke="#d8382a" stroke-width="4" fill="none"/>
+    <path d="M34 -38 L34 -8" stroke="#d8382a" stroke-width="4"/>
+  </g>
+
+  <!-- talismans -->
+  <g fill="#e7decc" stroke="#12100e" stroke-width="2" opacity="0.85">
+    <rect x="120" y="240" width="28" height="62" transform="rotate(-12 134 271)"/>
+    <rect x="160" y="360" width="22" height="52" transform="rotate(8 171 386)"/>
+    <rect x="520" y="420" width="24" height="58" transform="rotate(-6 532 449)"/>
+  </g>
+  <g stroke="#d8382a" stroke-width="2" opacity="0.8">
+    <path d="M128 260 L144 260 M126 276 L145 276 M124 292 L143 292"/>
+    <path d="M165 378 L178 378 M164 392 L180 392"/>
+    <path d="M526 438 L540 438 M525 454 L539 454"/>
+  </g>
+
+  <!-- spotlight -->
+  <path d="M320 0 L180 960 L500 960 Z" fill="#e7decc" opacity="0.08"/>
+  <g stroke="#e7decc" stroke-width="1.2" opacity="0.2">
+    <path d="M80 40 L50 200 M140 100 L110 260 M560 40 L530 200 M600 120 L570 280"/>
+  </g>
+  <rect width="640" height="960" fill="url(#ht)" opacity="0.12"/>
+  <rect width="640" height="960" fill="#e8dfcd" filter="url(#grain)" opacity="0.28"/>
+</svg>

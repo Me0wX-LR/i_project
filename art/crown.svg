@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 960" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#d8382a" stop-opacity="0.9"/>
+      <stop offset="0.6" stop-color="#d8382a" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#d8382a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="ht" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.9" fill="#e7decc" opacity="0.5"/>
+    </pattern>
+    <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" seed="66" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="33" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="mono"/>
+      <feComponentTransfer in="mono" result="alpha"><feFuncA type="linear" slope="0.26"/></feComponentTransfer>
+      <feComposite operator="in" in="alpha" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <rect width="640" height="960" fill="#0b0a09"/>
+  <circle cx="350" cy="330" r="320" fill="url(#halo)" opacity="0.9"/>
+  <circle cx="350" cy="330" r="220" fill="#d8382a" opacity="0.25" filter="url(#soft)"/>
+  <g fill="#e7decc" opacity="0.14">
+    <circle cx="120" cy="120" r="2"/><circle cx="180" cy="200" r="1.6"/><circle cx="520" cy="150" r="2"/>
+    <circle cx="560" cy="260" r="1.4"/><circle cx="90" cy="340" r="1.8"/><circle cx="480" cy="400" r="1.5"/>
+    <circle cx="150" cy="500" r="1.6"/><circle cx="580" cy="520" r="2"/><circle cx="70" cy="640" r="1.4"/>
+  </g>
+
+  <!-- floating shards -->
+  <g>
+    <path d="M470 100 L520 80 L536 170 L492 190 Z" fill="#12100e" stroke="#e7decc" stroke-width="2" opacity="0.9"/>
+    <path d="M90 260 L140 240 L154 330 L106 350 Z" fill="#12100e" stroke="#d8382a" stroke-width="2"/>
+    <path d="M500 560 L550 540 L566 630 L516 650 Z" fill="#12100e" stroke="#d8382a" stroke-width="2"/>
+    <path d="M130 600 L176 590 L184 670 L138 680 Z" fill="#12100e" stroke="#e7decc" stroke-width="2"/>
+  </g>
+
+  <!-- broken halo -->
+  <circle cx="350" cy="330" r="240" fill="none" stroke="#d8382a" stroke-width="4" opacity="0.4" stroke-dasharray="90 18 40 24"/>
+
+  <!-- left human half / white suit -->
+  <g filter="url(#rough)">
+    <path d="M60 960 L60 790 Q60 704 158 666 L244 630 Q270 612 276 566 L336 566 L336 960 Z" fill="#e7decc"/>
+    <path d="M336 566 L336 960 L60 960 L60 800 Q60 730 132 692 L230 646 L276 640 Z" fill="#d8ccb5"/>
+    <path d="M244 630 Q300 670 336 660 L336 960 L230 960 L206 740 Z" fill="#e7decc"/>
+    <path d="M60 960 L60 800 Q60 730 132 692 L196 660 L180 960 Z" fill="#f0e8d7"/>
+  </g>
+  <!-- right crystalline half -->
+  <g filter="url(#rough)">
+    <path d="M336 566 L400 566 Q410 612 440 632 L520 668 Q590 706 590 790 L590 960 L336 960 Z" fill="#0b0a09"/>
+    <path d="M336 640 L390 610 L420 690 L400 760 L440 820 L410 900 L440 960 L336 960 Z" fill="#12100e"/>
+    <path d="M400 566 L470 520 L510 590 L480 650 L540 700 L510 780 L560 840 L520 920 L590 960 L590 790 Q590 706 520 668 L440 632 Q410 612 400 566 Z" fill="#050404"/>
+  </g>
+  <g stroke="#d8382a" stroke-width="4" fill="none" opacity="0.95">
+    <path d="M360 610 L400 660 L382 712 L424 756 L404 820 L444 860 L426 920"/>
+    <path d="M400 660 L444 646 M382 712 L348 730 M424 756 L468 744 M404 820 L366 842 M444 860 L486 850"/>
+  </g>
+  <g fill="#d8382a" opacity="0.8">
+    <circle cx="400" cy="660" r="5"/><circle cx="424" cy="756" r="4"/><circle cx="444" cy="860" r="4"/>
+  </g>
+
+  <!-- suit details -->
+  <g stroke="#12100e" stroke-width="4" fill="none" opacity="0.8">
+    <path d="M276 640 L240 730 L258 960"/>
+    <path d="M300 650 L322 720 L310 820"/>
+    <path d="M180 700 L210 960"/>
+  </g>
+  <path d="M292 620 L320 620 L330 700 L300 740 L278 690 Z" fill="#12100e"/>
+  <path d="M302 628 L312 628 L316 690 L300 716 L290 690 Z" fill="#d8382a" opacity="0.8"/>
+
+  <!-- neck / face -->
+  <path d="M278 500 L392 500 L400 582 L272 582 Z" fill="#e7decc"/>
+  <path d="M254 320 Q256 236 322 220 Q390 236 398 326 L392 442 Q386 508 324 524 Q262 506 256 442 Z" fill="#e7decc"/>
+  <path d="M254 320 Q256 236 322 220 Q390 236 398 326 L392 442 Q386 508 324 524 Q262 506 256 442 Z" fill="none" stroke="#12100e" stroke-width="5"/>
+  <!-- long silver hair -->
+  <path d="M242 330 Q224 236 286 194 Q354 158 420 206 Q468 244 456 336 L440 320 Q442 266 408 242 L392 300 L368 244 Q338 288 304 246 L284 306 L262 248 Q240 282 250 338 Z" fill="#e7decc" stroke="#12100e" stroke-width="4" filter="url(#rough)"/>
+  <path d="M236 330 Q220 440 230 560 L260 540 L266 360 Z" fill="#e7decc" stroke="#12100e" stroke-width="3"/>
+  <path d="M452 340 Q472 450 462 570 L438 548 L434 370 Z" fill="#e7decc" stroke="#12100e" stroke-width="3"/>
+  <!-- face -->
+  <g fill="#12100e">
+    <path d="M274 350 Q298 338 320 350 L320 358 Q298 348 274 360 Z"/>
+    <path d="M342 350 Q366 338 390 352 L390 360 Q366 348 342 358 Z"/>
+    <ellipse cx="298" cy="364" rx="6.5" ry="5.5"/>
+    <ellipse cx="368" cy="364" rx="6.5" ry="5.5"/>
+    <path d="M326 372 L320 414 L332 418" fill="none" stroke="#12100e" stroke-width="3"/>
+    <path d="M292 468 Q324 478 356 464 Q340 490 322 488 Q304 487 292 468 Z" fill="#7e241c"/>
+  </g>
+  <path d="M274 430 L264 470 L280 486" stroke="#d8382a" stroke-width="4" fill="none" opacity="0.9"/>
+  <path d="M300 440 L310 474 L298 500" stroke="#d8382a" stroke-width="2.5" fill="none" opacity="0.7"/>
+
+  <!-- crown -->
+  <g filter="url(#rough)">
+    <path d="M242 214 L272 120 L306 180 L326 98 L352 176 L386 112 L406 210 L380 232 L266 238 Z" fill="#d8382a" stroke="#e7decc" stroke-width="4"/>
+    <path d="M262 208 L384 198" stroke="#12100e" stroke-width="8"/>
+    <path d="M272 120 L296 180 L326 98 L350 178 L386 112 L404 210" fill="none" stroke="#e7decc" stroke-width="3" opacity="0.9"/>
+    <circle cx="326" cy="190" r="14" fill="#12100e" stroke="#e7decc" stroke-width="3"/>
+    <circle cx="326" cy="190" r="6" fill="#d8382a"/>
+    <path d="M264 220 L280 196 M392 214 L376 194" stroke="#e7decc" stroke-width="3"/>
+  </g>
+
+  <!-- dust -->
+  <g fill="#d8382a" opacity="0.6">
+    <circle cx="120" cy="760" r="2"/><circle cx="160" cy="810" r="1.5"/><circle cx="90" cy="850" r="2.5"/>
+    <circle cx="540" cy="700" r="2"/><circle cx="580" cy="780" r="1.6"/><circle cx="500" cy="900" r="2"/>
+  </g>
+  <rect width="640" height="960" fill="url(#ht)" opacity="0.06"/>
+  <rect width="640" height="960" fill="#e8dfcd" filter="url(#grain)" opacity="0.24"/>
+</svg>

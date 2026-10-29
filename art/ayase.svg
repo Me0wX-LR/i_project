@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 960" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="ht" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.9" fill="#12100e" opacity="0.55"/>
+    </pattern>
+    <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" seed="14" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="18" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="mono"/>
+      <feComponentTransfer in="mono" result="alpha"><feFuncA type="linear" slope="0.22"/></feComponentTransfer>
+      <feComposite operator="in" in="alpha" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <rect width="640" height="960" fill="#e7decc"/>
+  <circle cx="320" cy="330" r="250" fill="#e8dfcd"/>
+  <circle cx="320" cy="330" r="250" fill="none" stroke="#d8382a" stroke-width="8" opacity="0.75"/>
+  <circle cx="320" cy="330" r="250" fill="url(#ht)" opacity="0.32"/>
+  <path d="M0 0 L640 0 L640 140 L0 80 Z" fill="#12100e" opacity="0.9" filter="url(#rough)"/>
+
+  <!-- crystal shards background -->
+  <g opacity="0.8">
+    <path d="M80 150 L140 110 L158 210 L108 246 Z" fill="#cfd8d5" stroke="#12100e" stroke-width="4"/>
+    <path d="M108 246 L158 210 L132 326 L86 300 Z" fill="#e8dfcd" stroke="#12100e" stroke-width="3"/>
+    <path d="M520 190 L570 160 L590 270 L540 300 Z" fill="#cfd8d5" stroke="#12100e" stroke-width="4"/>
+    <path d="M84 430 L130 410 L142 500 L100 520 Z" fill="#d8382a" opacity="0.7" stroke="#12100e" stroke-width="3"/>
+    <path d="M520 420 L566 438 L550 530 L508 512 Z" fill="#cfd8d5" stroke="#12100e" stroke-width="3"/>
+  </g>
+
+  <!-- hair behind -->
+  <path d="M188 430 Q150 260 250 186 Q330 130 416 190 Q500 250 462 452 L500 720 L430 690 L400 520 L398 380 L238 380 L232 540 L200 720 L150 676 Z" fill="#ddd5c4" stroke="#12100e" stroke-width="6" filter="url(#rough)"/>
+  <g stroke="#b8ae9b" stroke-width="2" opacity="0.8">
+    <path d="M206 340 L212 620 M244 300 L238 540 M286 280 L282 500 M356 282 L360 500 M400 306 L406 540 M440 356 L446 620"/>
+  </g>
+
+  <!-- coat -->
+  <g filter="url(#rough)">
+    <path d="M60 960 L60 780 Q60 692 158 654 L238 618 Q264 600 270 546 L390 546 Q398 602 430 620 L508 656 Q592 700 592 788 L592 960 Z" fill="#12100e"/>
+    <path d="M262 560 L390 560 L410 700 L400 960 L246 960 L238 700 Z" fill="#100f0d"/>
+    <path d="M238 618 L196 700 L226 960 L160 960 L150 750 Q154 684 238 640 Z" fill="#1c1814"/>
+    <path d="M430 620 L470 700 L442 960 L508 960 L518 752 Q514 686 430 640 Z" fill="#1c1814"/>
+  </g>
+  <g stroke="#e7decc" stroke-width="3" opacity="0.6">
+    <path d="M390 560 L420 660 M262 560 L232 660"/>
+    <path d="M300 612 L300 960 M360 612 L360 960"/>
+  </g>
+  <g fill="#cfd8d5" stroke="#12100e" stroke-width="3">
+    <rect x="286" y="624" width="18" height="18"/>
+    <rect x="356" y="624" width="18" height="18"/>
+    <rect x="286" y="700" width="18" height="18"/>
+    <rect x="356" y="700" width="18" height="18"/>
+  </g>
+
+  <!-- neck and face -->
+  <path d="M270 500 L390 500 L396 574 L264 574 Z" fill="#e7decc"/>
+  <path d="M250 320 Q252 232 320 214 Q394 232 400 324 L394 444 Q388 512 326 528 Q264 510 254 444 Z" fill="#e7decc"/>
+  <path d="M250 320 Q252 232 320 214 Q394 232 400 324 L394 444 Q388 512 326 528 Q264 510 254 444 Z" fill="none" stroke="#12100e" stroke-width="5"/>
+  <!-- bangs -->
+  <path d="M238 330 Q218 230 282 188 Q350 152 418 200 Q466 240 458 334 L438 318 Q438 262 404 238 L386 290 L366 242 Q338 286 304 244 L286 296 L266 244 Q242 276 250 332 Z" fill="#ddd5c4" stroke="#12100e" stroke-width="5" filter="url(#rough)"/>
+  <!-- eyes -->
+  <g fill="#12100e">
+    <path d="M270 350 Q294 336 318 348 L318 356 Q294 346 270 358 Z"/>
+    <path d="M340 348 Q364 336 390 350 L390 358 Q364 346 340 356 Z"/>
+    <ellipse cx="296" cy="364" rx="7" ry="6"/>
+    <ellipse cx="366" cy="364" rx="7" ry="6"/>
+    <path d="M326 372 L318 418 L330 422" fill="none" stroke="#12100e" stroke-width="3"/>
+    <path d="M296 466 Q326 474 356 464" fill="none" stroke="#12100e" stroke-width="3"/>
+  </g>
+  <circle cx="296" cy="364" r="2.4" fill="#d8382a"/>
+  <circle cx="366" cy="364" r="2.4" fill="#d8382a"/>
+  <!-- crack -->
+  <path d="M300 512 L312 548 L302 576 L318 606 L310 646" stroke="#d8382a" stroke-width="4" fill="none" opacity="0.9"/>
+  <path d="M310 550 L332 562 L324 582" stroke="#d8382a" stroke-width="2.5" fill="none" opacity="0.8"/>
+
+  <!-- floating shard foreground -->
+  <g>
+    <path d="M430 320 L488 286 L512 372 L458 406 Z" fill="#e8dfcd" stroke="#12100e" stroke-width="4" opacity="0.95"/>
+    <path d="M458 406 L512 372 L492 448 L448 446 Z" fill="#cfd8d5" stroke="#12100e" stroke-width="3"/>
+    <path d="M448 300 L470 288 L474 330 L454 338 Z" fill="#d8382a" opacity="0.7"/>
+  </g>
+
+  <!-- rain/snow -->
+  <g stroke="#12100e" stroke-width="1" opacity="0.25">
+    <path d="M90 600 L70 720 M130 660 L110 780 M560 560 L540 680 M600 620 L580 740 M500 720 L480 840"/>
+  </g>
+  <g fill="#e7decc" stroke="#12100e" stroke-width="1" opacity="0.8">
+    <circle cx="120" cy="560" r="3"/><circle cx="180" cy="620" r="2"/><circle cx="520" cy="570" r="3"/>
+    <circle cx="570" cy="690" r="2"/><circle cx="80" cy="700" r="2"/><circle cx="460" cy="660" r="2"/>
+  </g>
+  <rect width="640" height="960" fill="#e8dfcd" filter="url(#grain)" opacity="0.32"/>
+</svg>

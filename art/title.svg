@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#080706"/>
+      <stop offset="0.45" stop-color="#14110e"/>
+      <stop offset="1" stop-color="#241e18"/>
+    </linearGradient>
+    <radialGradient id="redglow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#d8382a" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#d8382a" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#d8382a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b0a09"/>
+      <stop offset="1" stop-color="#050404"/>
+    </linearGradient>
+    <pattern id="dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.85" fill="#e8dfcd" opacity="0.6"/>
+    </pattern>
+    <pattern id="dotsBlack" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.85" fill="#080706" opacity="0.65"/>
+    </pattern>
+    <filter id="rough" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" seed="21" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="3" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="mono"/>
+      <feComponentTransfer in="mono" result="alpha"><feFuncA type="linear" slope="0.28"/></feComponentTransfer>
+      <feComposite operator="in" in="alpha" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#night)"/>
+  <circle cx="1170" cy="330" r="360" fill="url(#redglow)" opacity="0.8"/>
+  <circle cx="1170" cy="330" r="240" fill="#d8382a" opacity="0.92"/>
+  <circle cx="1170" cy="330" r="240" fill="url(#dotsBlack)" opacity="0.9"/>
+  <circle cx="1170" cy="330" r="240" fill="none" stroke="#e8dfcd" stroke-width="2" opacity="0.2"/>
+
+  <!-- ink slash left -->
+  <path d="M-180 0 L210 0 L80 900 L-220 900 Z" fill="#050404" opacity="0.65" filter="url(#rough)"/>
+  <path d="M70 0 L110 0 L20 900 L-30 900 Z" fill="#d8382a" opacity="0.5" filter="url(#rough)"/>
+
+  <!-- distant skyline -->
+  <g fill="#090807">
+    <path d="M0 610 L0 520 L80 520 L80 470 L140 470 L140 530 L220 530 L220 490 L290 490 L290 545 L390 545 L390 460 L450 460 L450 540 L540 540 L540 500 L610 500 L610 560 L700 560 L700 520 L780 520 L780 580 L880 580 L880 540 L960 540 L960 590 L1600 560 L1600 900 L0 900 Z"/>
+    <rect x="330" y="380" width="24" height="90"/>
+    <rect x="500" y="400" width="18" height="70"/>
+  </g>
+  <g fill="#e8dfcd" opacity="0.1">
+    <rect x="100" y="540" width="14" height="30"/>
+    <rect x="240" y="550" width="12" height="26"/>
+    <rect x="420" y="520" width="12" height="24"/>
+    <rect x="720" y="575" width="10" height="20"/>
+  </g>
+
+  <!-- bay and bridge -->
+  <path d="M0 690 L1600 690 L1600 760 L0 760 Z" fill="#050505"/>
+  <g stroke="#0b0a09" stroke-width="16" fill="none">
+    <path d="M0 730 L480 730 L480 650 L700 650"/>
+    <path d="M0 900 L480 900 L480 730"/>
+  </g>
+  <g stroke="#0b0a09" stroke-width="5" opacity="0.9">
+    <path d="M60 690 L60 760 M140 690 L140 760 M220 690 L220 760 M300 690 L300 760 M380 690 L380 760"/>
+  </g>
+  <g fill="#e8dfcd" opacity="0.18">
+    <path d="M0 780 L300 780 L260 900 L0 900 Z"/>
+  </g>
+  <g fill="#d8382a" opacity="0.2">
+    <ellipse cx="1000" cy="820" rx="420" ry="40"/>
+    <ellipse cx="300" cy="850" rx="280" ry="30"/>
+  </g>
+
+  <!-- foreground rooftop -->
+  <path d="M0 820 L1600 780 L1600 900 L0 900 Z" fill="url(#roof)"/>
+  <path d="M0 820 L1600 780" stroke="#2a241d" stroke-width="4"/>
+  <path d="M0 850 L1600 812" stroke="#1a1612" stroke-width="2"/>
+  <g fill="#0b0a09">
+    <rect x="1240" y="700" width="140" height="90"/>
+    <rect x="1270" y="670" width="80" height="40"/>
+    <path d="M1280 700 L1300 620 L1330 620 L1320 700 Z"/>
+  </g>
+  <g fill="#e8dfcd" opacity="0.16">
+    <rect x="1280" y="720" width="30" height="34"/>
+  </g>
+
+  <!-- hooded overman -->
+  <g filter="url(#rough)">
+    <path d="M760 900 L760 780 Q760 700 820 668 Q862 645 866 590 Q868 535 930 512 Q1000 492 1014 570 Q1020 625 1056 650 Q1110 688 1110 780 L1110 900 Z" fill="#070606"/>
+    <path d="M842 620 Q930 570 1016 622 Q1020 680 1000 715 L872 726 Q842 680 842 620 Z" fill="#0b0a09"/>
+    <path d="M872 618 Q920 590 974 610 L970 650 Q922 630 878 648 Z" fill="#e8dfcd" opacity="0.16"/>
+    <path d="M892 640 Q922 626 950 632 L948 646 Q922 638 896 650 Z" fill="#d8382a" opacity="0.85"/>
+    <path d="M820 668 Q780 700 772 750 L756 780 Q800 760 836 726 Z" fill="#080706"/>
+  </g>
+  <g stroke="#d8382a" fill="none" stroke-linecap="round" opacity="0.95">
+    <path d="M1064 660 L1040 690 L1052 716 L1028 742 L1040 780 L1018 812" stroke-width="5"/>
+    <path d="M1052 690 L1080 704 L1070 732 L1094 748" stroke-width="3"/>
+    <path d="M1004 724 L984 748 L994 770" stroke-width="2.5"/>
+  </g>
+  <g fill="#d8382a" opacity="0.9">
+    <circle cx="1064" cy="660" r="7"/>
+    <circle cx="1028" cy="742" r="5"/>
+  </g>
+
+  <!-- rim light and ink hatching on the overman -->
+  <g stroke="#e7decc" fill="none" opacity="0.3">
+    <path d="M866 590 Q868 535 930 512" stroke-width="4"/>
+    <path d="M1014 570 Q1020 625 1056 650" stroke-width="3"/>
+    <path d="M830 700 Q800 724 790 760" stroke-width="2"/>
+  </g>
+  <g stroke="#050404" stroke-width="2" fill="none" opacity="0.7">
+    <path d="M900 560 Q940 540 980 560 M890 620 Q940 600 990 620 M900 690 Q950 675 1000 690"/>
+    <path d="M790 760 Q850 730 910 760 M780 820 Q850 790 930 820"/>
+  </g>
+  <circle cx="1180" cy="250" r="4" fill="#e7decc" opacity="0.5"/>
+  <circle cx="1100" cy="200" r="2.5" fill="#e7decc" opacity="0.35"/>
+  <circle cx="1260" cy="320" r="3" fill="#e7decc" opacity="0.3"/>
+
+  <!-- rain -->
+  <g stroke="#e8dfcd" stroke-width="1.2" opacity="0.2">
+    <path d="M80 30 L20 220 M190 0 L130 190 M300 50 L240 240 M410 10 L350 200 M520 70 L460 260 M630 30 L570 220 M740 90 L680 280 M850 50 L790 240 M960 110 L900 300 M1070 70 L1010 260 M1180 130 L1120 320 M1290 90 L1230 280 M1400 150 L1340 340 M1510 110 L1450 300"/>
+    <path d="M120 350 L60 540 M230 310 L170 500 M340 370 L280 560 M450 330 L390 520 M560 390 L500 580 M670 350 L610 540 M780 410 L720 600 M890 370 L830 560 M1000 430 L940 620 M1110 390 L1050 580 M1220 450 L1160 640 M1330 410 L1270 600 M1440 470 L1380 660 M1550 430 L1490 620"/>
+  </g>
+  <g stroke="#e8dfcd" stroke-width="0.8" opacity="0.1">
+    <path d="M150 650 L120 760 M290 610 L260 720 M430 670 L400 780 M570 630 L540 740 M710 690 L680 800 M850 650 L820 760 M990 710 L960 820 M1130 670 L1100 780 M1270 730 L1240 840 M1410 690 L1380 800 M1550 750 L1520 860"/>
+  </g>
+
+  <!-- halftone overlays -->
+  <rect width="1600" height="900" fill="url(#dots)" opacity="0.05"/>
+  <circle cx="1170" cy="330" r="240" fill="url(#dots)" opacity="0.18"/>
+  <rect width="1600" height="900" fill="#e8dfcd" filter="url(#grain)" opacity="0.32"/>
+</svg>

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 960" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="ht" width="7" height="7" patternUnits="userSpaceOnUse">
+      <circle cx="1.1" cy="1.1" r="1" fill="#12100e" opacity="0.5"/>
+    </pattern>
+    <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="44" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="23" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="mono"/>
+      <feComponentTransfer in="mono" result="alpha"><feFuncA type="linear" slope="0.24"/></feComponentTransfer>
+      <feComposite operator="in" in="alpha" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <rect width="640" height="960" fill="#e7decc"/>
+  <circle cx="220" cy="300" r="230" fill="#d8382a" opacity="0.85"/>
+  <circle cx="220" cy="300" r="230" fill="url(#ht)" opacity="0.7"/>
+  <path d="M640 0 L480 0 L580 960 L640 960 Z" fill="#12100e" filter="url(#rough)"/>
+
+  <!-- speed lines -->
+  <g stroke="#12100e" stroke-width="4" opacity="0.35">
+    <path d="M60 180 L0 160 M80 230 L0 200 M100 280 L0 245 M500 80 L640 20 M520 130 L640 70"/>
+  </g>
+
+  <!-- body -->
+  <g filter="url(#rough)">
+    <path d="M20 960 L20 780 Q20 688 118 648 L214 610 Q246 594 252 544 L388 544 Q394 598 428 614 L520 650 Q620 700 620 796 L620 960 Z" fill="#12100e"/>
+    <path d="M230 570 Q320 610 410 570 L430 740 L400 960 L240 960 L210 740 Z" fill="#1c1814"/>
+    <path d="M230 570 Q320 610 410 570 L430 740 L400 960 L240 960 L210 740 Z" fill="url(#ht)" opacity="0.25"/>
+    <!-- shoulders skin -->
+    <path d="M88 700 Q120 640 200 626 L224 700 L200 788 L74 806 Z" fill="#d8cdb9"/>
+    <path d="M552 700 Q520 640 440 626 L416 700 L440 788 L566 806 Z" fill="#d8cdb9"/>
+  </g>
+  <!-- chain -->
+  <g stroke="#d8cdb9" stroke-width="10" fill="none" opacity="0.95">
+    <path d="M500 740 Q560 760 548 830 Q536 900 476 910 Q420 916 404 870"/>
+    <path d="M420 916 Q470 930 500 900" stroke-width="8"/>
+  </g>
+  <g fill="#e7decc">
+    <circle cx="510" cy="780" r="14"/><circle cx="536" cy="820" r="14"/><circle cx="520" cy="866" r="14"/><circle cx="474" cy="898" r="14"/>
+    <circle cx="510" cy="780" r="7" fill="#12100e"/><circle cx="536" cy="820" r="7" fill="#12100e"/><circle cx="520" cy="866" r="7" fill="#12100e"/><circle cx="474" cy="898" r="7" fill="#12100e"/>
+  </g>
+  <!-- neck -->
+  <path d="M260 490 L392 490 L402 570 L250 570 Z" fill="#d8cdb9"/>
+  <path d="M260 490 L392 490 L398 540 L254 540 Z" fill="#12100e" opacity="0.2"/>
+  <!-- head -->
+  <path d="M240 310 Q244 216 320 200 Q400 216 406 312 L400 414 Q394 490 322 508 Q250 490 244 414 Z" fill="#d8cdb9"/>
+  <path d="M240 310 Q244 216 320 200 Q400 216 406 312 L400 414 Q394 490 322 508 Q250 490 244 414 Z" fill="none" stroke="#12100e" stroke-width="5"/>
+  <!-- stubble/shadow -->
+  <path d="M248 380 Q250 470 322 506 Q394 476 398 382 L398 414 Q390 490 322 508 Q252 490 244 414 Z" fill="#12100e" opacity="0.18"/>
+  <!-- scars -->
+  <path d="M252 270 L306 318" stroke="#d8382a" stroke-width="5"/>
+  <path d="M384 252 L350 306" stroke="#d8382a" stroke-width="4"/>
+  <path d="M250 350 L278 360" stroke="#12100e" stroke-width="3" opacity="0.6"/>
+  <!-- eyes -->
+  <g fill="#12100e">
+    <path d="M266 344 Q292 330 316 342 L316 350 Q292 340 266 352 Z"/>
+    <path d="M342 342 Q366 330 390 344 L390 352 Q366 340 342 350 Z"/>
+    <ellipse cx="292" cy="360" rx="8" ry="7"/>
+    <ellipse cx="368" cy="360" rx="8" ry="7"/>
+    <path d="M260 326 Q290 312 320 324 L320 330 Q290 320 260 332 Z" opacity="0.8"/>
+    <path d="M342 324 Q372 312 398 328 L398 334 Q372 320 342 330 Z" opacity="0.8"/>
+    <path d="M326 366 L318 410 L334 414" fill="none" stroke="#12100e" stroke-width="4"/>
+  </g>
+  <!-- grin -->
+  <path d="M272 446 Q322 470 372 442 Q356 482 322 486 Q286 482 272 446 Z" fill="#12100e"/>
+  <path d="M282 452 Q322 466 360 448" stroke="#e7decc" stroke-width="5" fill="none"/>
+  <g fill="#e7decc">
+    <path d="M292 456 L292 470 L300 470 L300 458 Z"/>
+    <path d="M310 460 L310 474 L318 474 L318 462 Z"/>
+    <path d="M328 460 L328 474 L336 474 L336 462 Z"/>
+    <path d="M346 456 L346 470 L354 470 L354 456 Z"/>
+  </g>
+  <!-- red cracks shoulder -->
+  <path d="M540 690 L514 722 L530 750 L506 786 L520 830" stroke="#d8382a" stroke-width="6" fill="none" opacity="0.95"/>
+  <path d="M530 752 L558 768 L548 798" stroke="#d8382a" stroke-width="3" fill="none"/>
+  <!-- knuckle blood -->
+  <g fill="#d8382a" opacity="0.75">
+    <circle cx="560" cy="860" r="10"/><circle cx="584" cy="852" r="7"/><circle cx="540" cy="880" r="6"/>
+  </g>
+
+  <!-- rain -->
+  <g stroke="#e7decc" stroke-width="1.5" opacity="0.26">
+    <path d="M60 0 L30 180 M120 80 L90 260 M180 0 L150 180 M520 300 L490 480 M580 380 L550 560 M600 220 L570 400"/>
+  </g>
+  <path d="M0 860 L200 860 L160 960 L0 960 Z" fill="url(#ht)" opacity="0.22"/>
+  <rect width="640" height="960" fill="#e8dfcd" filter="url(#grain)" opacity="0.3"/>
+</svg>

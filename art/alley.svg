@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#131210"/>
+      <stop offset="0.6" stop-color="#1f1b16"/>
+      <stop offset="1" stop-color="#0b0a09"/>
+    </linearGradient>
+    <radialGradient id="lamp" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffb36a" stop-opacity="0.85"/>
+      <stop offset="0.45" stop-color="#d8382a" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#d8382a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vend" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#d7e3df" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#d7e3df" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.9" fill="#e8dfcd" opacity="0.6"/>
+    </pattern>
+    <pattern id="dotsDark" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.9" fill="#0b0a09" opacity="0.4"/>
+    </pattern>
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="8" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="9" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="mono"/>
+      <feComponentTransfer in="mono" result="alpha"><feFuncA type="linear" slope="0.24"/></feComponentTransfer>
+      <feComposite operator="in" in="alpha" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+
+  <!-- distant opening -->
+  <rect x="760" y="300" width="170" height="300" fill="#e8dfcd" opacity="0.12"/>
+  <rect x="790" y="330" width="110" height="270" fill="#e8dfcd" opacity="0.08"/>
+  <circle cx="845" cy="380" r="80" fill="#d8382a" opacity="0.12" filter="url(#soft)"/>
+
+  <!-- left wall -->
+  <path d="M0 0 L700 0 L700 900 L0 900 Z" fill="#171410"/>
+  <path d="M0 0 L700 0 L700 80 L0 140 Z" fill="#0d0c0a"/>
+  <path d="M0 720 L700 590 L700 900 L0 900 Z" fill="#100e0c"/>
+  <g fill="#0a0908">
+    <rect x="0" y="150" width="680" height="40"/>
+    <rect x="0" y="310" width="680" height="26"/>
+    <rect x="0" y="470" width="680" height="34"/>
+    <rect x="0" y="620" width="680" height="26"/>
+  </g>
+  <g stroke="#0a0908" stroke-width="26" fill="none">
+    <path d="M80 0 L80 700"/>
+    <path d="M200 0 L200 660"/>
+    <path d="M520 0 L520 620"/>
+  </g>
+  <g stroke="#2a241d" stroke-width="3" fill="none" opacity="0.8">
+    <path d="M80 120 L80 700 M200 90 L200 660 M520 60 L520 620"/>
+  </g>
+  <!-- pipes -->
+  <g fill="none" stroke="#0a0908" stroke-width="18">
+    <path d="M620 0 L620 240 Q620 270 650 270 L700 270"/>
+    <path d="M580 0 L580 200 Q580 230 550 230 L520 230"/>
+  </g>
+  <g fill="#2b251e">
+    <rect x="600" y="140" width="20" height="20"/>
+    <rect x="560" y="100" width="20" height="20"/>
+  </g>
+  <!-- AC units -->
+  <g fill="#1e1a15" stroke="#080706" stroke-width="4">
+    <rect x="250" y="360" width="130" height="90"/>
+    <rect x="390" y="520" width="100" height="70"/>
+  </g>
+  <g stroke="#4a4034" stroke-width="2" opacity="0.6">
+    <path d="M265 380 L365 380 M265 395 L365 395 M265 410 L365 410 M265 425 L365 425"/>
+    <path d="M400 535 L480 535 M400 548 L480 548 M400 561 L480 561"/>
+  </g>
+
+  <!-- right wall -->
+  <path d="M1600 0 L920 0 L920 900 L1600 900 Z" fill="#1b1712"/>
+  <path d="M1600 0 L920 0 L920 70 L1600 140 Z" fill="#0b0a09"/>
+  <path d="M1600 700 L920 580 L920 900 L1600 900 Z" fill="#100e0c"/>
+  <g fill="#0a0908">
+    <rect x="930" y="170" width="670" height="30"/>
+    <rect x="930" y="360" width="670" height="24"/>
+    <rect x="930" y="530" width="670" height="30"/>
+  </g>
+  <g stroke="#0a0908" stroke-width="22" fill="none">
+    <path d="M1530 0 L1530 680"/>
+    <path d="M1380 0 L1380 640"/>
+    <path d="M1120 0 L1120 600"/>
+  </g>
+  <g stroke="#2a241d" stroke-width="3" opacity="0.8">
+    <path d="M1530 100 L1530 680 M1380 80 L1380 640 M1120 50 L1120 600"/>
+  </g>
+
+  <!-- laundry lines -->
+  <g stroke="#463d31" stroke-width="2" fill="none" opacity="0.9">
+    <path d="M700 200 Q820 240 930 196"/>
+    <path d="M700 245 Q820 285 930 240"/>
+  </g>
+  <g fill="#0c0b0a">
+    <path d="M760 205 L760 300 L810 290 L810 210 Z"/>
+    <path d="M835 215 L835 285 L875 280 L875 220 Z"/>
+    <path d="M775 255 L775 330 L812 322 L812 258 Z"/>
+  </g>
+
+  <!-- lantern -->
+  <g>
+    <circle cx="1000" cy="230" r="120" fill="url(#lamp)" opacity="0.7" filter="url(#soft)"/>
+    <path d="M1000 140 L1000 180" stroke="#0a0908" stroke-width="6"/>
+    <path d="M960 190 Q1000 160 1040 190 L1032 270 Q1000 300 968 270 Z" fill="#c62f23"/>
+    <path d="M968 196 Q1000 172 1032 196 L1027 262 Q1000 284 973 262 Z" fill="#e8dfcd" opacity="0.22"/>
+    <g stroke="#7f1d15" stroke-width="2" opacity="0.8">
+      <path d="M975 205 L1025 205 M972 225 L1028 225 M970 245 L1030 245 M973 265 L1027 265"/>
+    </g>
+    <circle cx="1000" cy="280" r="6" fill="#e8b53a"/>
+  </g>
+
+  <!-- vending machine -->
+  <g>
+    <circle cx="1220" cy="520" r="170" fill="url(#vend)" opacity="0.55" filter="url(#soft)"/>
+    <rect x="1150" y="400" width="170" height="300" fill="#0d0c0a" stroke="#050404" stroke-width="5"/>
+    <rect x="1168" y="420" width="134" height="160" fill="#d7e3df" opacity="0.75"/>
+    <g fill="#d8382a" opacity="0.75">
+      <rect x="1180" y="438" width="22" height="48"/>
+      <rect x="1210" y="438" width="22" height="48"/>
+      <rect x="1240" y="438" width="22" height="48"/>
+      <rect x="1270" y="438" width="22" height="48"/>
+      <rect x="1180" y="500" width="22" height="48"/>
+      <rect x="1210" y="500" width="22" height="48"/>
+      <rect x="1240" y="500" width="22" height="48" opacity="0.4"/>
+      <rect x="1270" y="500" width="22" height="48"/>
+    </g>
+    <rect x="1170" y="596" width="130" height="26" fill="#1f1b16"/>
+    <rect x="1180" y="642" width="110" height="34" fill="#080706"/>
+    <circle cx="1198" cy="659" r="8" fill="#e8b53a"/>
+    <rect x="1230" y="650" width="42" height="18" fill="#3a3329"/>
+  </g>
+
+  <!-- floor -->
+  <path d="M0 900 L0 690 L700 590 L920 590 L1600 690 L1600 900 Z" fill="#14110e"/>
+  <path d="M0 690 L700 590 L920 590 L1600 690 L1600 730 L920 630 L700 630 L0 730 Z" fill="#211c16"/>
+  <g opacity="0.25">
+    <path d="M300 900 L620 630 L700 630 L420 900 Z" fill="#e8dfcd"/>
+    <path d="M1100 900 L980 630 L920 630 L1010 900 Z" fill="#e8dfcd"/>
+    <path d="M1180 900 L1240 690 L1320 690 L1280 900 Z" fill="#d8382a"/>
+    <path d="M820 900 L835 640 L870 640 L880 900 Z" fill="#e8dfcd" opacity="0.4"/>
+  </g>
+  <!-- puddles -->
+  <g fill="#e8dfcd" opacity="0.16">
+    <ellipse cx="360" cy="790" rx="150" ry="22"/>
+    <ellipse cx="1120" cy="820" rx="210" ry="26"/>
+    <ellipse cx="760" cy="720" rx="90" ry="12"/>
+  </g>
+  <g fill="#d8382a" opacity="0.2">
+    <ellipse cx="1120" cy="818" rx="140" ry="14"/>
+  </g>
+
+  <!-- cables and rain -->
+  <g stroke="#070606" stroke-width="3" fill="none" opacity="0.9">
+    <path d="M0 90 Q300 180 620 120 Q900 70 1200 150 Q1420 210 1600 140"/>
+    <path d="M0 130 Q310 220 640 160 Q930 110 1230 190 Q1450 250 1600 180"/>
+  </g>
+  <g stroke="#e8dfcd" stroke-width="1.1" opacity="0.22">
+    <path d="M100 20 L60 150 M190 0 L150 130 M280 40 L240 170 M370 0 L330 130 M460 50 L420 180 M550 10 L510 140 M640 60 L600 190 M730 20 L690 150 M820 70 L780 200 M910 30 L870 160 M1000 80 L960 210 M1090 40 L1050 170 M1180 90 L1140 220 M1270 50 L1230 180 M1360 100 L1320 230 M1450 60 L1410 190 M1540 110 L1500 240"/>
+  </g>
+  <rect width="1600" height="900" fill="url(#dotsDark)" opacity="0.4"/>
+  <rect width="1600" height="900" fill="#e8dfcd" filter="url(#grain)" opacity="0.3"/>
+</svg>

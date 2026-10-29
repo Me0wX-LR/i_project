@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b0a09"/>
+      <stop offset="0.55" stop-color="#191612"/>
+      <stop offset="1" stop-color="#2b241d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.72" cy="0.42" r="0.5">
+      <stop offset="0" stop-color="#d8382a" stop-opacity="0.5"/>
+      <stop offset="0.5" stop-color="#d8382a" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#d8382a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#27211b"/>
+      <stop offset="1" stop-color="#0c0b0a"/>
+    </linearGradient>
+    <pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.05" fill="#e8dfcd" opacity="0.55"/>
+    </pattern>
+    <pattern id="dotsRed" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.85" fill="#d8382a" opacity="0.8"/>
+    </pattern>
+    <pattern id="windows" width="26" height="34" patternUnits="userSpaceOnUse">
+      <rect width="26" height="34" fill="none"/>
+      <rect x="5" y="7" width="8" height="10" fill="#e8dfcd" opacity="0.16"/>
+      <rect x="17" y="7" width="5" height="10" fill="#e8dfcd" opacity="0.08"/>
+    </pattern>
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="4" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="mono"/>
+      <feComponentTransfer in="mono" result="alpha">
+        <feFuncA type="linear" slope="0.22"/>
+      </feComponentTransfer>
+      <feComposite operator="in" in="alpha" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1180" cy="250" r="210" fill="#d8382a" opacity="0.13" filter="url(#soft)"/>
+  <circle cx="1180" cy="250" r="148" fill="#e8dfcd" opacity="0.9"/>
+  <circle cx="1180" cy="250" r="148" fill="url(#dots)" opacity="0.5"/>
+  <g fill="#0c0b0a" opacity="0.55">
+    <circle cx="1148" cy="218" r="12" fill="#c9bea8"/>
+    <circle cx="1214" cy="292" r="9" fill="#c9bea8"/>
+    <circle cx="1172" cy="300" r="5" fill="#c9bea8"/>
+  </g>
+
+  <!-- distant skyline -->
+  <g fill="#0e0d0b">
+    <rect x="0" y="420" width="1600" height="200"/>
+    <path d="M0 470 L70 470 L70 390 L120 390 L120 450 L180 450 L180 350 L225 350 L225 460 L280 460 L280 410 L340 410 L340 465 L420 465 L420 370 L470 370 L470 455 L540 455 L540 400 L610 400 L610 460 L1600 460 L1600 620 L0 620 Z"/>
+    <rect x="690" y="400" width="40" height="70"/>
+    <rect x="742" y="355" width="24" height="115"/>
+    <rect x="800" y="420" width="52" height="50"/>
+    <rect x="1320" y="340" width="34" height="130"/>
+    <rect x="1380" y="390" width="70" height="80"/>
+  </g>
+  <g fill="url(#windows)" opacity="0.8">
+    <rect x="0" y="470" width="1600" height="150"/>
+  </g>
+  <g fill="#e8dfcd" opacity="0.28">
+    <rect x="710" y="420" width="3" height="40"/>
+    <rect x="752" y="375" width="2" height="60"/>
+    <rect x="1334" y="360" width="2" height="70"/>
+    <rect x="1400" y="410" width="22" height="3"/>
+  </g>
+
+  <!-- radio tower -->
+  <g stroke="#0b0a09" fill="none" stroke-width="10">
+    <path d="M960 560 L1000 210 L1040 560"/>
+    <path d="M976 420 L1024 420 M968 480 L1032 480 M982 350 L1018 350"/>
+  </g>
+  <circle cx="1000" cy="205" r="9" fill="#d8382a"/>
+
+  <!-- left buildings -->
+  <g>
+    <path d="M0 900 L0 300 L250 340 L310 470 L310 900 Z" fill="#12100e"/>
+    <path d="M0 330 L230 370 L270 470 L0 470 Z" fill="#1c1814"/>
+    <g fill="#e8dfcd" opacity="0.18">
+      <rect x="38" y="390" width="24" height="34"/>
+      <rect x="88" y="398" width="24" height="34"/>
+      <rect x="138" y="405" width="24" height="34"/>
+      <rect x="188" y="414" width="24" height="34"/>
+      <rect x="46" y="482" width="24" height="30"/>
+      <rect x="100" y="486" width="24" height="30"/>
+      <rect x="154" y="492" width="24" height="30"/>
+      <rect x="208" y="498" width="24" height="30"/>
+      <rect x="52" y="566" width="20" height="28"/>
+      <rect x="106" y="570" width="20" height="28"/>
+      <rect x="160" y="574" width="20" height="28"/>
+    </g>
+    <path d="M250 560 L310 560 L310 900 L250 900 Z" fill="#0c0b0a"/>
+    <rect x="268" y="520" width="24" height="132" fill="#0b0a09"/>
+    <rect x="270" y="540" width="20" height="60" fill="#d8382a" opacity="0.45"/>
+    <rect x="270" y="610" width="20" height="26" fill="#e8dfcd" opacity="0.18"/>
+    <!-- awning -->
+    <path d="M0 640 L280 660 L280 690 L0 675 Z" fill="#1a1612"/>
+    <path d="M0 640 L280 660" stroke="#d8382a" stroke-width="5" opacity="0.55"/>
+  </g>
+
+  <!-- right buildings -->
+  <g>
+    <path d="M1600 900 L1600 260 L1390 300 L1320 450 L1320 900 Z" fill="#0e0d0b"/>
+    <path d="M1600 300 L1420 330 L1360 460 L1600 450 Z" fill="#1d1915"/>
+    <g fill="#e8dfcd" opacity="0.17">
+      <rect x="1412" y="360" width="28" height="36"/>
+      <rect x="1464" y="352" width="28" height="36"/>
+      <rect x="1516" y="344" width="28" height="36"/>
+      <rect x="1430" y="440" width="24" height="28"/>
+      <rect x="1484" y="432" width="24" height="28"/>
+      <rect x="1538" y="424" width="24" height="28"/>
+      <rect x="1440" y="520" width="20" height="24"/>
+      <rect x="1500" y="512" width="20" height="24"/>
+    </g>
+    <rect x="1340" y="500" width="70" height="180" fill="#0b0a09"/>
+    <rect x="1352" y="520" width="46" height="70" fill="#d8382a" opacity="0.4"/>
+    <rect x="1352" y="606" width="46" height="20" fill="#e8dfcd" opacity="0.2"/>
+    <!-- vertical sign -->
+    <rect x="1280" y="350" width="30" height="210" fill="#d8382a" opacity="0.85"/>
+    <g fill="#e8dfcd" opacity="0.85">
+      <rect x="1288" y="372" width="14" height="16"/>
+      <rect x="1288" y="404" width="14" height="16"/>
+      <rect x="1288" y="436" width="14" height="16"/>
+      <rect x="1288" y="468" width="14" height="16"/>
+      <rect x="1288" y="500" width="14" height="16"/>
+    </g>
+    <path d="M1600 700 L1320 680 L1320 720 L1600 730 Z" fill="#1a1612"/>
+  </g>
+
+  <!-- overhead cables -->
+  <g stroke="#070606" stroke-width="3" fill="none" opacity="0.9">
+    <path d="M-20 180 Q300 260 620 200 Q920 150 1240 240 Q1440 290 1620 230"/>
+    <path d="M-20 230 Q320 310 640 250 Q960 200 1260 300 Q1460 350 1620 290"/>
+    <path d="M-20 285 Q340 360 660 300 Q980 250 1280 350 Q1480 400 1620 340"/>
+  </g>
+
+  <!-- street -->
+  <path d="M0 900 L0 660 L330 570 L1280 570 L1600 660 L1600 900 Z" fill="url(#wet)"/>
+  <path d="M330 570 L1280 570 L1600 660 L1600 900 L0 900 L0 660 Z" fill="url(#dots)" opacity="0.09"/>
+  <g stroke="#e8dfcd" opacity="0.35">
+    <path d="M760 585 L840 585" stroke-width="10"/>
+    <path d="M730 655 L870 655" stroke-width="14"/>
+    <path d="M660 760 L940 760" stroke-width="18"/>
+  </g>
+  <g opacity="0.45">
+    <path d="M300 900 L470 600 L520 600 L330 900 Z" fill="#d8382a" opacity="0.22"/>
+    <path d="M1280 900 L1180 600 L1130 600 L1210 900 Z" fill="#d8382a" opacity="0.18"/>
+    <path d="M1000 900 L1010 660 L1050 660 L1080 900 Z" fill="#e8dfcd" opacity="0.08"/>
+  </g>
+  <ellipse cx="410" cy="820" rx="170" ry="18" fill="#d8382a" opacity="0.18" filter="url(#soft)"/>
+  <ellipse cx="1180" cy="760" rx="220" ry="24" fill="#d8382a" opacity="0.14" filter="url(#soft)"/>
+
+  <!-- sign glow -->
+  <g opacity="0.65" filter="url(#soft)">
+    <rect x="1260" y="330" width="80" height="260" fill="#d8382a"/>
+    <rect x="230" y="500" width="80" height="160" fill="#d8382a"/>
+  </g>
+
+  <!-- character silhouette on the left edge -->
+  <g fill="#060505" filter="url(#rough)">
+    <path d="M90 900 L90 760 Q90 700 140 675 Q170 660 178 620 Q184 585 215 580 Q250 578 252 620 Q254 655 280 672 Q320 695 320 760 L320 900 Z"/>
+    <path d="M170 620 Q212 600 250 622 L242 660 Q210 680 178 660 Z" fill="#0b0a09"/>
+    <circle cx="213" cy="608" r="30" fill="#0b0a09"/>
+    <path d="M183 605 Q213 590 243 607 L240 625 Q212 612 186 624 Z" fill="#1a1612"/>
+  </g>
+  <path d="M235 690 L252 735 L244 770 L262 812" stroke="#d8382a" stroke-width="4" fill="none" opacity="0.9"/>
+  <path d="M204 700 L190 742 L198 778" stroke="#d8382a" stroke-width="3" fill="none" opacity="0.7"/>
+
+  <!-- rain -->
+  <g stroke="#e8dfcd" stroke-width="1.2" opacity="0.24">
+    <path d="M80 40 L40 150 M150 10 L110 120 M240 70 L200 180 M330 30 L290 140 M420 80 L380 190 M510 20 L470 130 M600 90 L560 200 M700 40 L660 150 M800 100 L760 210 M900 20 L860 130 M1000 80 L960 190 M1100 30 L1060 140 M1200 90 L1160 200 M1300 40 L1260 150 M1400 100 L1360 210 M1500 30 L1460 140 M1560 110 L1520 220"/>
+    <path d="M110 200 L90 280 M210 180 L190 260 M300 220 L280 300 M400 180 L380 260 M500 230 L480 310 M600 190 L580 270 M720 220 L700 300 M820 180 L800 260 M940 230 L920 310 M1040 190 L1020 270 M1160 220 L1140 300 M1280 180 L1260 260 M1400 230 L1380 310 M1520 190 L1500 270"/>
+  </g>
+  <g stroke="#e8dfcd" stroke-width="0.8" opacity="0.14">
+    <path d="M180 340 L160 420 M320 300 L300 380 M460 350 L440 430 M620 300 L600 380 M780 360 L760 440 M940 320 L920 400 M1100 370 L1080 450 M1260 320 L1240 400 M1420 360 L1400 440 M1560 310 L1540 390"/>
+  </g>
+
+  <rect width="1600" height="900" fill="url(#dots)" opacity="0.05"/>
+  <rect width="1600" height="900" fill="#e8dfcd" filter="url(#grain)" opacity="0.35"/>
+</svg>
