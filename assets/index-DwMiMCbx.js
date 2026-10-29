@@ -4407,7 +4407,7 @@ void main() {
 
 記者會上，專家爭論不休。你坐在電視前，心裡浮現第一個答案。`,options:[{label:"一種可以用科學解釋、也能被利用的現象。",hint:"能測量，就能對付。",axis:"S",backgrounds:["veteran","underworld"]},{label:"人類還沒準備好承認的下一種可能。",hint:"有些東西不該被歸類。",axis:"N",backgrounds:["shrine","musician"]}]},{id:"q3",title:"代價",text:`裏八咫要你交出一個無辜的人，換取自己的安全。
 
-對方的臉模糊不清，但你知道那個人真的存在。`,options:[{label:"先問清楚代價、成功率與退路。",hint:"活下來才有資格談對錯。",axis:"T",backgrounds:["underworld","journalist"]},{label:"拒絕。就算這會讓自己活不下去。",hint:"有些答案不需要計算。",axis:"F",backgrounds:["medic","shrine"]}]},{id:"q4",title:"七十二小時",text:`倒數開始。城市在你面前攤開，像一張沒有標記的地圖。
+對方的臉模糊不清，但你知道那個人真的存在。`,options:[{label:"先問清楚代價、成功率與退路。",hint:"活下來才有資格談對錯。",axis:"T",backgrounds:["underworld","journalist"]},{label:"拒絕。就算這會讓自己活不下去。",hint:"有些答案不需要計算。",axis:"F",backgrounds:["medic","shrine"]}]},{id:"q4",title:"72小時",text:`倒數開始。城市在你面前攤開，像一張沒有標記的地圖。
 
 你會怎麼走？`,options:[{label:"先畫出時間表、路線與備用計畫。",hint:"把未知拆成可以處理的格子。",axis:"J",backgrounds:["store","veteran"]},{label:"先走上街，讓城市告訴你答案。",hint:"計畫永遠趕不上變化。",axis:"P",backgrounds:["musician","urchin"]}]},{id:"q5",title:"人群",text:`你剛做完一件事，那件事不能被人記住。
 
@@ -6470,7 +6470,7 @@ ${t.tagline}
         <span class="title-cn">流變計畫</span>
         <span class="title-en">PROJECT IGNIS</span>
       </h1>
-      <p class="title-sub">七二小時・超越者獵殺遊戲</p>
+      <p class="title-sub">72小時・超越者獵殺遊戲</p>
       <div class="title-stamp">第七次選別</div>
     </div>
     <div class="title-menu panel paper">
@@ -7044,7 +7044,7 @@ ${t.tagline}
         ${Be.modal==="help"?Cv():Be.modal==="about"?Pv():Lv()}
       </div>
     </div>`:""}function Cv(){return`
-    <div class="modal-head"><span class="micro">規則 / RULES</span><h2>七十二小時</h2></div>
+    <div class="modal-head"><span class="micro">規則 / RULES</span><h2>72小時</h2></div>
     <div class="help-body">
       <p class="lead">你是「超越者」——學名 Homo transscendens，英語 Overman，又叫新人類。世界把你們歸類為癌細胞；裏八咫的 Project Ignis 負責決定哪一顆癌細胞還能繼續分裂。<br><br>活到閉幕，累積 30 枚刻印，站上第一名。</p>
       <div class="help-grid">
