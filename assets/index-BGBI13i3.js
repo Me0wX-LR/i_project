@@ -5435,7 +5435,11 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 
 不是因為害怕。
 
-是因為其中一個名字，正試著回答你。`,manifest_60:`侵蝕率突破 60%。
+是因為其中一個名字，正試著回答你。
+
+鏡子裡的人跟著你眨眼，慢了半拍。
+
+你決定不告訴任何人這件事。`,manifest_60:`侵蝕率突破 60%。
 
 你的影子開始比動作慢半拍。
 
@@ -5449,7 +5453,13 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 
 電車從地下經過，整條街震了一下。
 
-你的影子沒有跟著震。`,manifest_85:`侵蝕率突破 85%。
+你的影子沒有跟著震。
+
+你蹲下來，把手貼在地上。地面是冷的，影子是熱的。
+
+「再一下下就好。」你對它說。
+
+它沒有回答，但它動了。`,manifest_85:`侵蝕率突破 85%。
 
 你已經記不清自己原本有幾隻手。
 
@@ -5463,7 +5473,13 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 
 這一次，你沒有拒絕的力氣。
 
-你只希望留下來的那一部分，還記得澪的電話號碼。`,r_witness:`一個高中生舉著手機，鏡頭正對著你。
+你只希望留下來的那一部分，還記得澪的電話號碼。
+
+號碼有十一位。你在心裡默唸了三次。
+
+第三次的時候，你發現自己唸錯了一個數字。
+
+你不敢再唸第四次。`,r_witness:`一個高中生舉著手機，鏡頭正對著你。
 
 他比你還害怕，手卻沒有放下。
 
@@ -5479,7 +5495,13 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 
 他退了一步，又停住。
 
-「我可以刪掉。」他說。「你要我刪掉嗎？」`,r_stray:`自動販賣機旁邊縮著一個十六、七歲的男孩。
+「我可以刪掉。」他說。「你要我刪掉嗎？」
+
+他身後還有兩個同學，撐著同一把傘，不敢過來，也沒有走。
+
+他們在等他。
+
+你忽然發現，這是他第一次自己決定一件事。`,r_stray:`自動販賣機旁邊縮著一個十六、七歲的男孩。
 
 他的手臂上有一道剛覺醒的紅色裂紋，還不會控制，光順著血管一跳一跳。
 
@@ -5509,7 +5531,15 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 
 警察抬頭看你，眼神很疲倦。
 
-「下一個。」`,r_bond_danger:`你收到一張照片。
+「下一個。」
+
+機器響了一聲，螢幕上跳出你的代號。
+
+他看了兩秒，然後把螢幕轉向自己，按了清除。
+
+「走吧。」
+
+他沒有解釋。`,r_bond_danger:`你收到一張照片。
 
 照片裡，羈絆者站在平常會出現的地方。身後有一輛黑色廂型車，車窗半開。
 
@@ -5523,7 +5553,13 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 
 是抵押品。
 
-你把照片放大，看見背景那家店還亮著燈。她應該還沒回家。`,r_collapse:`你醒來時，發現自己站在一座天橋上。
+你把照片放大，看見背景那家店還亮著燈。她應該還沒回家。
+
+照片的角落有時間戳：三分鐘前。
+
+也就是說，她現在可能還站在那裡。
+
+你把手機放下，又拿起來。`,r_collapse:`你醒來時，發現自己站在一座天橋上。
 
 不記得怎麼走上來的。
 
@@ -5567,7 +5603,11 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 
 紙條下面壓著一支鎮靜劑，和一枚刻印晶片。
 
-鎮靜劑的標籤被人撕掉了。晶片上用刀刻了一個字：活。`},ib={opening:{accept:`你把信封點燃。
+鎮靜劑的標籤被人撕掉了。晶片上用刀刻了一個字：活。
+
+你把兩樣東西分開放進口袋。
+
+走了兩條街，你才發現自己一直在摸那枚晶片的邊緣。`},ib={opening:{accept:`你把信封點燃。
 
 火光照亮掌心的裂紋，像一張早就簽好的契約。
 
@@ -7096,7 +7136,13 @@ Level 0.0001。
 
 最後一欄寫著：預估存活。
 
-他的手停在你的那一列，沒有按下去。`,choices:[{id:"allow",label:"讓他記錄。反正你也想知道自己值多少。",hint:"情報 +1",apply:t=>(be(t,1,"你看見學院對你的評估"),oe(`他按了一下。
+他的手停在你的那一列，沒有按下去。
+
+「學姐說，要尊重樣本。」他說，聲音很小，像在說給自己聽。
+
+雨打在他的平板上，他用手掌抹掉，動作很輕。
+
+他們只待了六分鐘。車開走時，你發現路口多了一根新的監視器。`,choices:[{id:"allow",label:"讓他記錄。反正你也想知道自己值多少。",hint:"情報 +1",apply:t=>(be(t,1,"你看見學院對你的評估"),oe(`他按了一下。
 
 「二十二小時。」他唸出來，然後抬頭看你，像在確認你有沒有生氣。
 
@@ -7120,7 +7166,17 @@ Level 0.0001。
 
 你找到自己的代號。金額比你想的高。
 
-旁邊有個穿西裝的人一直在看你，手裡拿著一個信封。`,choices:[{id:"take",label:"接下那封委託。",hint:"刻印 +3／警戒 +3",apply:t=>(Tt(t,3,"你接了財團Z 的懸賞"),X(t,3,"你的名字開始出現在懸賞榜上"),Ne(`信封裡是三個座標，和一張空白收據。
+旁邊有個穿西裝的人一直在看你，手裡拿著一個信封。
+
+「你是本人嗎？」他問。
+
+「不是。」
+
+「沒關係。」他把信封遞過來。「名字寫在裡面，你自己填。」
+
+你接過來。信封很薄，摸得到裡面有一張卡片。
+
+他沒有等你回答，撐開傘就走了。`,choices:[{id:"take",label:"接下那封委託。",hint:"刻印 +3／警戒 +3",apply:t=>(Tt(t,3,"你接了財團Z 的懸賞"),X(t,3,"你的名字開始出現在懸賞榜上"),Ne(`信封裡是三個座標，和一張空白收據。
 
 「簽名就好。」西裝男說。「上面會自己填上內容。」
 
@@ -7146,7 +7202,15 @@ Level 0.0001。
 
 「我們不是恨你。我們是怕你。」
 
-「你會怕你自己嗎？」`,choices:[{id:"listen",label:"聽完。",hint:"情報 +1",apply:t=>(be(t,1,"你理解自然主義者的想法"),oe(`他說了很久。
+「你會怕你自己嗎？」
+
+他等著，沒有催。
+
+你注意到他左手的小指少了一截，傷口很舊，像被什麼東西整齊地切掉。
+
+他順著你的視線看下去，把手收進袖子裡。
+
+「這是工作傷害。」他說。「不是你們做的。」`,choices:[{id:"listen",label:"聽完。",hint:"情報 +1",apply:t=>(be(t,1,"你理解自然主義者的想法"),oe(`他說了很久。
 
 最後他站起來，把傳單留在椅子上。
 
@@ -7174,7 +7238,13 @@ Level 0.0001。
 
 從三十到二十一，過了三十八個小時。
 
-沒有人告訴你那九個人是怎麼被「減少」的。`,choices:[{id:"memorize",label:"把新規則記下來，連時間一起。",hint:"情報 +1",apply:t=>(be(t,1,"你記錄了選別規則的變化"),oe(`你發現一件奇怪的事：每一條新規則，都讓這座城市變得更像一座監獄。
+沒有人告訴你那九個人是怎麼被「減少」的。
+
+你把終端翻面放在桌上，讓螢幕朝下。
+
+三秒後你又把它翻回來。
+
+你發現自己開始害怕錯過通知——這比通知本身更讓你害怕。`,choices:[{id:"memorize",label:"把新規則記下來，連時間一起。",hint:"情報 +1",apply:t=>(be(t,1,"你記錄了選別規則的變化"),oe(`你發現一件奇怪的事：每一條新規則，都讓這座城市變得更像一座監獄。
 
 但沒有一條規則說，不能活著。`))},{id:"comply",label:"立刻回住處。今晚不出去。",hint:"警戒 -1",apply:t=>(X(t,-1,"你遵守了宵禁"),Ae(`你繞開主要道路，走小巷回去。
 
@@ -7194,7 +7264,15 @@ Level 0.0001。
 
 終端顯示：侵蝕反應 100%。
 
-不是你的。`,choices:[{id:"investigate",label:"檢查牆上的結晶。",hint:"知性檢定 DC 14",apply:t=>Je(t,"intelligence",14,"分析異常結晶").ok?(be(t,2,"你推斷出王冠的能力性質"),Ne(`結晶裡有指紋。
+不是你的。
+
+你注意到巷口的門牌還在，字被結晶包住，只看得出「常夜」兩個字。
+
+蹲著的人開始用額頭撞牆，一下，一下，節奏很穩。
+
+結晶沒有碎。他的額頭也沒有流血。
+
+你退了出去。身後的牆發出一聲很輕的、像冰塊擠壓的聲音。`,choices:[{id:"investigate",label:"檢查牆上的結晶。",hint:"知性檢定 DC 14",apply:t=>Je(t,"intelligence",14,"分析異常結晶").ok?(be(t,2,"你推斷出王冠的能力性質"),Ne(`結晶裡有指紋。
 
 不是人的指紋，是很多人的，一個疊一個，像有人把整條巷子的人都握進手裡。
 
@@ -7222,7 +7300,13 @@ Level 0.0001。
 
 「修羅神槍・劉千軍。Level 20。評估：不可接觸。」
 
-兩份檔案被同一根釘書針釘在一起。`,choices:[{id:"read",label:"讀完，包括附錄。",hint:"情報 +2",apply:t=>(be(t,2,"你讀完了神田與劉千軍的對照檔案"),Ne(`附錄只有一頁：
+兩份檔案被同一根釘書針釘在一起。
+
+你翻到最後一頁，發現還有一行手寫的字，墨水顏色不一樣：
+
+「如果這兩個人都無法阻止，那就不是我們的問題了。」
+
+沒有署名。字跡很漂亮，像練過的。`,choices:[{id:"read",label:"讀完，包括附錄。",hint:"情報 +2",apply:t=>(be(t,2,"你讀完了神田與劉千軍的對照檔案"),Ne(`附錄只有一頁：
 
 「若 Project Ignis 出現 Level 15 以上個體，啟動神田隼人。」
 
@@ -7454,7 +7538,13 @@ Level 0.0001。
 
 每一次廣播，數字都少一半。
 
-你開始懷疑這不是淘汰，是被挑選。`,choices:[{id:"record",label:"記下排行與剩下的時間。",hint:"情報 +1",apply:t=>(be(t,1,"你記下了最後階段的規則"),oe(`你把三個數字寫在牆上，用石頭刻：30、21、11。
+你開始懷疑這不是淘汰，是被挑選。
+
+街角的擴音器又響了一次，這次只有很短的一句：
+
+「恭喜各位走到這裡。」
+
+那句話聽起來，像有人真的在恭喜你。`,choices:[{id:"record",label:"記下排行與剩下的時間。",hint:"情報 +1",apply:t=>(be(t,1,"你記下了最後階段的規則"),oe(`你把三個數字寫在牆上，用石頭刻：30、21、11。
 
 刻完之後你退後一步看，發現它們排成一個很整齊的斜線。
 
@@ -7480,7 +7570,17 @@ Level 0.0001。
 
 你發現自己沒有答案。
 
-他也沒有催你。雨水從他的下顎滴下來，落在柏油路上。`,choices:[{id:"honest",label:"說實話：不知道。",hint:"侵蝕 -5",apply:t=>(De(t,-5,"你對一個人類說了實話"),Ae(`「不知道。」你說。
+他也沒有催你。雨水從他的下顎滴下來，落在柏油路上。
+
+「我問過很多人這個問題。」他說。「大部分的人回答『活下去』。」
+
+「那不是答案。」
+
+「那也是答案。」他說。「只是很短的答案。」
+
+他把手插進口袋。「想清楚了再回答我。不急。」
+
+他走了。地上留著一個沒有被雨淋濕的鞋印。`,choices:[{id:"honest",label:"說實話：不知道。",hint:"侵蝕 -5",apply:t=>(De(t,-5,"你對一個人類說了實話"),Ae(`「不知道。」你說。
 
 他點頭，像這個答案在他的預期之內。
 
@@ -7514,7 +7614,17 @@ Level 0.0001。
 
 「或者，你拿著它活到閉幕。沒有人會知道發生過什麼。」
 
-雨落在文件上，他沒有收回去。`,choices:[{id:"accept",label:"接下文件。",hint:"取得證據／警戒 +6",apply:t=>(be(t,2,"你取得了審判庭需要的證據"),X(t,6,"你與審判庭達成協議"),t.player.flags.has_evidence=!0,Ne(`文件只有三頁。
+雨落在文件上，他沒有收回去。
+
+「你為什麼要幫我？」
+
+「我不幫你。」他說。「我幫那些名字。」
+
+他指了指名單最下面幾行——那些已經被劃掉的名字。
+
+「他們沒有親人。沒有人會替他們問。」
+
+他把手收回長袍裡。「所以只能由我來問。」`,choices:[{id:"accept",label:"接下文件。",hint:"取得證據／警戒 +6",apply:t=>(be(t,2,"你取得了審判庭需要的證據"),X(t,6,"你與審判庭達成協議"),t.player.flags.has_evidence=!0,Ne(`文件只有三頁。
 
 他看著你收下，點了點頭。
 
@@ -7550,7 +7660,15 @@ Level 0.0001。
 
 終端顯示：王冠。侵蝕率 100%。距離 1.2 公里。
 
-排水溝的水面浮著一層薄薄的結晶，映出你的臉——比你記得的样子年輕一點。`,choices:[{id:"go",label:"去碼頭。你想知道他請你看什麼。",hint:"警戒 +3／情報 +1",apply:t=>(X(t,3,"你朝碼頭方向移動"),be(t,1,"你知道王冠在等你"),Ne(`你走了三步，終端就跳出新的提示：
+排水溝的水面浮著一層薄薄的結晶，映出你的臉——比你記得的樣子年輕一點。
+
+「你也是失敗品。」那個聲音說。「失敗品最接近真相，因為失敗品知道自己缺什麼。」
+
+「你缺什麼？」你問。
+
+水面的倒影笑了，比你慢了半秒。
+
+「一個活著的見證人。」`,choices:[{id:"go",label:"去碼頭。你想知道他請你看什麼。",hint:"警戒 +3／情報 +1",apply:t=>(X(t,3,"你朝碼頭方向移動"),be(t,1,"你知道王冠在等你"),Ne(`你走了三步，終端就跳出新的提示：
 
 「目標移動中。方向：第七號碼頭。」
 
@@ -7616,7 +7734,13 @@ Level 0.0001。
 
 你在對街看完了全程。
 
-終端彈出一行字：「感謝您的配合。」`,choices:[{id:"follow",label:"跟蹤那輛貨車。",hint:"敏捷檢定 DC 14",apply:t=>Je(t,"dexterity",14,"跟蹤回收車").ok?(be(t,2,"你找到了財團Z 的回收站"),Ne(`貨車開進港區一棟沒有招牌的倉庫。
+終端彈出一行字：「感謝您的配合。」
+
+貨車開走前，其中一個人停下來，朝你的方向看了一眼。
+
+他沒有走過來，只是舉起手，做了一個很輕的、像打招呼的動作。
+
+然後上車。門關上。車走了。`,choices:[{id:"follow",label:"跟蹤那輛貨車。",hint:"敏捷檢定 DC 14",apply:t=>Je(t,"dexterity",14,"跟蹤回收車").ok?(be(t,2,"你找到了財團Z 的回收站"),Ne(`貨車開進港區一棟沒有招牌的倉庫。
 
 門口停著七輛同樣的車。
 
@@ -7720,7 +7844,23 @@ Level 0.0001。
 
 「嗯。」
 
-她掛了電話。`))}]},bl=[lb,kb,Ob,Fb,Bb,$b,zb,Hb,Gb,Vb,Wb,Xb,qb,Yb,Zb,Kb,Jb,Qb,jb,ey,ty,ny,iy,ay,ry,sy,oy,ly,cb,db,ub,hb,fb,pb,mb,gb,_b,vb,bb,yb,xb,Sb,Mb,Eb,Tb,Ab,wb,Ib,Rb,Cb,Lb,Pb,Db,...Ub];Yu.push({id:"r_skirmish",at:0,random:!0,chapter:"插曲",title:"不屬於你的戰鬥",scene:"street",text:"街角的自動販賣機被撞翻。兩個超越者正在雨裡互相撕扯，路過的人全都低下頭。其中一個看見你，咧嘴笑了。「喂。要加入嗎？」另一個人的血已經流到你的鞋尖。",choices:[{id:"join",label:"加入戰鬥。",hint:"進入戰鬥／可獲得刻印",apply:t=>(xi(t,"kurokawa"),oe("你踏進水窪。「現在，」你說，「輪到我了。」"))},{id:"evade",label:"避開這場戰鬥。",hint:"敏捷檢定 DC 14／失敗會受傷",apply:t=>Je(t,"dexterity",14,"在混戰中穿過街角").ok?(X(t,-2,"你沒有留下痕跡"),Ae("你貼著牆走過去。身後的碰撞聲很遠，像另一個城市的事。")):(Qt(t,1,"你被飛來的碎玻璃劃傷"),qe("你退得太慢。一塊碎玻璃擦過你的臉，血混進雨裡。"))},{id:"watch",label:"站在暗處看完。",hint:"情報 +1／警戒 +2",apply:t=>(be(t,1,"你記下了兩個超越者的戰鬥方式"),X(t,2,"你停留在現場"),oe("你沒有出手。你看見其中一個人怎麼倒下，也看見另一個人怎麼補上最後一腳。這些都會有用。"))}]});const Zu=Yu,Wl=new Map([...bl,...Zu].map(t=>[t.id,t]));function Ku(t,e){t.phase!=="play"||t.pending||(t.stance=e)}function cy(t,e){t.phase==="play"&&t.bonds.some(n=>n.id===e&&n.alive)&&(t.contactTarget=e,t.stance="contact")}function yl(t,e){[0,1,2,4,8].includes(e)&&(t.speed=e)}function dy(t){for(const e of bl)if(!(e.random||t.eventsDone.includes(e.id))&&e.at===t.hour&&(!e.condition||e.condition(t)))return e;for(const e of bl)if(!(e.random||t.eventsDone.includes(e.id))&&e.at<=t.hour&&e.condition&&e.condition(t))return e;return null}function uy(t){const e=Zu.filter(n=>!t.eventsDone.includes(n.id)&&(!n.condition||n.condition(t)));return e.length?e[sn(t,0,e.length-1)]:null}function Xl(t){if(t.phase!=="play"||t.pending||t.battle||t.ending)return;if(t.hour>=ku){_o(t,Wl.get("closing"));return}t.hour+=1,hy(t);const e=dy(t);if(e){_o(t,e),vo(t);return}if(t.hour>=t.randomNextHour){const n=uy(t);if(n){_o(t,n),t.randomNextHour=t.hour+sn(t,8,11),vo(t);return}t.randomNextHour=t.hour+3}gy(t),vo(t)}function hy(t){for(const e of t.rivals)e.status==="active"&&(e.marks=Math.round((e.marks+e.rate)*10)/10)}function _o(t,e){if(t.pending={id:e.id},e.id.startsWith("manifest_")&&(!t.manifestOffers||t.manifestOffers.length===0)&&Fv(t),e.id==="tetsu_dead"){const n=t.rivals.find(i=>i.id==="tetsu");n&&(n.status="dead",n.note="死在第七號碼頭。刻印被裏八咫回收。")}if(e.id==="kurokawa_arrested"){const n=t.rivals.find(i=>i.id==="kurokawa");n&&(n.status="arrested",n.note="被神田隼人逮捕。刻印全數回收。")}if(e.id==="kurokawa_massacre"){const n=t.rivals.find(i=>i.id==="kurokawa");n&&t.player.flags.kurokawa_defeated&&(n.status="dead",n.note="倒在常夜中央通。至死都在笑。")}if(e.id==="ayase_proposal"){const n=t.rivals.find(i=>i.id==="ayase");n&&t.player.flags.ayase_dead&&(n.status="dead")}}function vo(t){if(t.phase==="play"&&(t.player.encroachment>=100&&fy(t),t.phase==="play")){if(t.hour>=48&&(!t.player.wanted&&t.player.heat>=70&&(t.player.wanted=!0,t.player.wantedAt=t.hour,Be(t,"danger","神田隼人已將你列為指名手配。包圍網開始收縮。")),t.player.wanted&&t.player.heat<35&&(t.player.wanted=!1,Be(t,"system","警戒指數降到閾值以下。神田暫時撤回對你的直接追捕。"))),t.hour===24||t.hour===48||t.hour===60){const e=ni(t);Be(t,"rival",`排名更新：第 ${e.rank}／${e.total}。領先者 ${e.list[0].name}（${Math.floor(e.list[0].marks)} 刻印）。`)}py(t)}}function fy(t){const e=15+Math.floor((t.player.encroachment-100)/5);Je(t,"constitution",e,"抵抗侵蝕失控",gi(t).has("constitution")?2:0).ok?Be(t,"bond","你把那個聲音壓回去了。至少這一小時。"):(t.player.collapse+=1,Be(t,"danger",`失控 ${t.player.collapse}/3。你的身體做了你不記得的事。`),t.player.collapse>=3&&rn(t,"monster"))}function py(t){t.player.heat>=70&&!t.player.flags.warn70&&(t.player.flags.warn70=!0,Be(t,"danger",t.hour>=48?"警戒指數 70：神田的檔案上出現了你的代號。":"警戒指數 70：你的代號開始在參賽者之間流傳。")),t.player.heat>=90&&!t.player.flags.warn90&&(t.player.flags.warn90=!0,Be(t,"danger","警戒指數 90：裏八咫已將你標記為優先回收對象。")),t.player.encroachment>=100&&!t.player.flags.warn100&&(t.player.flags.warn100=!0,Be(t,"danger","侵蝕率 100%：每一小時，你都要重新說服自己還是人。"))}const Md=["城市沒有因為你的倒數而停下來。上班族撐著傘走過，沒有人抬頭。","便利商店的自動門反覆開合。店員在補貨，電視在播天氣。","遠處有警笛，但沒有往這個方向來。暫時。","雨水把牆上的塗鴉沖成一片模糊的紅。","一隻烏鴉停在電線上，歪著頭看你，像在看一份不太有趣的報告。","你經過一面玻璃，發現自己已經習慣不去看倒影。","車站廣播念著陌生的站名。每一班車都通往這座城市的其他角落。","清潔隊正在沖洗昨晚的血跡。水混著泡沫流進排水溝。","有人在騎樓下賣傘。他一個晚上沒賣出幾把，因為雨已經下得太久。","早餐店的鐵門拉開一半，蒸氣湧出來，帶著醬油和豆漿的味道。","一台提款機吐出一張收據，被風吹到你腳邊。上面的餘額不夠住一晚旅館。","兩個高中生蹲在便利商店門口分一碗關東煮。他們說話的聲音很小，笑聲很大。","你數了三個路口、四個監視器，沒有一個對著你。這讓你更不安。","醫院的急診燈亮著。門口有人抽菸，抽到一半就哭了，然後又點了一根。","計程車司機把窗搖下來問你要不要搭車。你說不用。他把窗搖回去，沒有多問。","天橋下有人在睡覺，被子是拆開的紙箱。他的呼吸很穩。"];function my(t,e){const n=Au.get(e);!n||t.phase!=="play"||(t.districtId=e,Be(t,"system",`移動到${n.name}（${n.en}）。${n.effect}`))}function gy(t){const e=Hi(t);switch(t.stance){case"lie_low":{X(t,t.player.flags?.streetwise?-4:-3,"你避開主要街道"),t.hour%2===0&&yi(t,t.player.flags?.field_medicine?2:1,"你在廢棄網咖睡了兩小時"),Be(t,"action",`你躲進${e.tag.split("・")[1]??"城市"}的陰影裡。終端上的警戒指數慢慢下降。`);break}case"hunt_normal":{Tt(t,1,"你處理了一個落單的普通人"),X(t,5,"屍體被發現"),t.player.killsNormal+=1,t.player.encroachment>=100&&(Tt(t,2,"你回過神時，現場已經沒有活人"),X(t,5,"失控殺戮留下大量痕跡"),De(t,2)),Be(t,"action","你沒有用顯現。只是刀，和一個來不及喊出聲的人。");break}case"power_hunt":{const i=Jt(t),a=t.player.abilityId==="ash"||(t.player.manifested??[]).includes("ash")?3:2;Tt(t,a,"顯現獵殺完成"),X(t,7,"顯現的殘留痕跡"),t.player.killsNormal+=1,Be(t,"action",`「${e.name}」的某一條街安靜了。刻印 +${a}，侵蝕 +${i}。`);break}case"hunt_overman":{const i=Jt(t),a=13+Math.floor(t.hour/30),r=Je(t,As(t),a,"狩獵落單超越者",ur(t));if(r.ok){const s=r.nat20?15:10;Tt(t,s,r.nat20?"你壓倒性擊殺了一名超越者":"你殺死了一名超越者"),X(t,4,"超越者屍體被發現"),t.player.killsOverman+=1,Be(t,"action","對方的顯現在你身上留下灼痕。你拿走他的刻印，也拿走他的終端。")}else Vu(t,5+Math.floor(t.hour/20),2,"超越者的反擊"),X(t,4,"戰鬥留下血跡"),Be(t,"danger","對方比你更快。你逃走了，但傷口還在流血。");Be(t,"system",`這次狩獵消耗了 ${i} 點侵蝕。`);break}case"investigate":{const i=11+(t.player.heat>=50?2:0);Je(t,"wisdom",i,"調查城市異象").ok?(be(t,1,"你拼湊出一條線索"),X(t,1,"你出現在不該出現的地方"),Be(t,"action","你找到了另一名超越者的移動路線，還有一張被撕掉一半的裏八咫地圖。")):(X(t,2,"你問了太多問題"),Be(t,"action","你花了一整個小時，只確認了一件事：有人比你更早來過。"));break}case"contact":{let i=t.contactTarget;if(i||(i=t.bonds.filter(a=>a.alive).sort((a,r)=>r.level-a.level)[0]?.id??null),i){const a=hr(t,i);Be(t,"action",a)}else Be(t,"danger","你打開通訊錄，發現沒有任何一個號碼還能撥通。");break}case"destroy":{const i=Jt(t,6),a=t.player.abilityId==="ash"||(t.player.manifested??[]).includes("ash")?3:2;Tt(t,a,"城市破壞被折算為刻印"),X(t,9,"大規模破壞"),Be(t,"action",`你讓一棟無人建築倒下。裏八咫把混亂記成 ${a} 枚刻印。侵蝕 +${i}。`);break}}const n=Au.get(t.districtId);n&&(n.intel>0&&t.stance==="investigate"&&be(t,n.intel,`${n.name}的額外線索`),n.marks>0&&(t.stance==="hunt_normal"||t.stance==="hunt_overman"||t.stance==="destroy")&&Tt(t,n.marks,`${n.name}的獵場加成`),n.heat!==0&&X(t,n.heat,`${n.name}的區域風險`),t.stance==="lie_low"&&n.id==="residential"&&X(t,-1,"舊住宅區沒有監視器"),n.id==="academy"&&t.stance==="power_hunt"&&De(t,1,"學院特區的實驗殘留")),t.hour%3===0&&Be(t,"story",Md[(t.hour/3+t.cityId.length)%Md.length].replace("城市",e.name))}function _y(t,e,n){if(t.phase!=="play"||!t.pending||t.pending.id!==e||t.pending.result)return;const i=Wl.get(e);if(!i)return;const a=Xu(i,t).find(s=>s.id===n);if(!a||a.requires&&!a.requires(t))return;t.lastRoll=null;const r=a.apply(t);if(t.eventsDone.push(e),t.battle){t.pending=null;return}t.ending||(t.pending={id:e,result:rb(e,n,r.text),resultTone:r.tone,title:i.title})}function vy(t){t.pending?.result&&(t.pending=null)}function ql(t){if(!t.pending||t.battle)return null;const e=Wl.get(t.pending.id);if(!e)return null;const n=Xu(e,t).map(i=>({id:i.id,label:i.label,hint:i.hint,disabled:!!i.requires&&!i.requires(t)}));return{id:e.id,chapter:e.chapter,title:e.title,speaker:e.speaker,portrait:e.portrait,scene:e.scene,text:sb(e,t),choices:n,result:t.pending.result,resultTone:t.pending.resultTone}}function Sa(t){const e=Math.floor(t/24)+1,n=t%24,i=`${String(n).padStart(2,"0")}:00`;return{day:e,time:i,full:`第 ${e} 天 ${i}`}}function nt(t){try{if(typeof localStorage>"u")return;localStorage.setItem("overman-erosion-city.save.v1",JSON.stringify(t))}catch{}}function Yl(){var t,e,n,i,a,r,s,o,l,c,d,h,u,f,v,y,g,p,w,N,x,E,T,C,m,S,L;try{if(typeof localStorage>"u")return null;const R=localStorage.getItem("overman-erosion-city.save.v1");if(!R)return null;const M=JSON.parse(R);if(!M||M.version!==1||!M.phase||M.phase==="play"&&!M.player)return null;if(M.creation&&((t=M.creation).mainStat??(t.mainStat=null),(e=M.creation).coreEpithet??(e.coreEpithet="未登錄的迴路"),(n=M.creation).abilityChoices??(n.abilityChoices=[]),M.creation.step==="questions"&&(!M.creation.questionIds||M.creation.questionIds.length===0)&&(M.creation.questionIds=Nu(()=>Math.random())),(i=M.creation).questionIds??(i.questionIds=[])),M.player){(a=M.player).manifested??(a.manifested=[]),(r=M.player).armorId??(r.armorId="jacket"),(s=M.player).coreEpithet??(s.coreEpithet="未登錄的迴路");const I={body:"strength",reflex:"dexterity",intellect:"intelligence",will:"constitution",perception:"wisdom",charm:"charisma",strength:"strength",dexterity:"dexterity",constitution:"constitution",intelligence:"intelligence",wisdom:"wisdom",charisma:"charisma"},D=G=>{const te={strength:0,dexterity:0,constitution:0,intelligence:0,wisdom:0,charisma:0};for(const[q,Q]of Object.entries(G??{})){const ne=I[q];ne&&(te[ne]=Number(Q)||0)}return te};M.player.stats=D(M.player.stats),(o=M.player).skills??(o.skills=[]),(l=M.player).codenameEn||(l.codenameEn=ar(M)),(c=M.player).gender??(c.gender="unspecified"),(d=M.player).avatar??(d.avatar=null),(h=M.player).ultimateId??(h.ultimateId="edge"),M.creation&&((u=M.creation).codenameEn||(u.codenameEn=ar(M)),(f=M.creation).gender??(f.gender="unspecified"),(v=M.creation).avatar??(v.avatar=null),(y=M.creation).ultimateId??(y.ultimateId="edge"),(g=M.creation).ultimateChoices??(g.ultimateChoices=[])),M.creation&&(M.creation.stats=D(M.creation.stats));const B=String(M.player.mainStat??"strength");M.player.mainStat=I[B]??"strength";const Y=String(M.creation?.mainStat??"");M.creation&&(M.creation.mainStat=Y?I[Y]??null:null),(p=M.player).mainStat??(p.mainStat=Object.keys(M.player.stats).sort((G,te)=>M.player.stats[te]-M.player.stats[G])[0]),(w=M.player).flags??(w.flags={})}if(M.manifestOffers??(M.manifestOffers=[]),M.battle??(M.battle=null),M.districtId??(M.districtId="station"),M.endingCombo??(M.endingCombo=null),M.battle){(N=M.battle).introSeen??(N.introSeen=!0),(x=M.battle).allies??(x.allies=[]),(E=M.battle).civilians??(E.civilians=[]),(T=M.battle).maxRounds??(T.maxRounds=null),(C=M.battle).finalBattle??(C.finalBattle=!1),(m=M.battle).ultimateUsed??(m.ultimateUsed=!1),(S=M.battle).shield??(S.shield=0),(L=M.battle).selectedSkill??(L.selectedSkill=null);for(const I of M.battle.enemies??[])I.skills??(I.skills=[]),I.strength??(I.strength=I.attack),I.dexterity??(I.dexterity=I.attack)}return M.battle&&!Array.isArray(M.battle.enemies)&&(M.battle=null),M}catch{return null}}function Zl(){try{typeof localStorage<"u"&&localStorage.removeItem("overman-erosion-city.save.v1")}catch{}}function by(t){const e=t.endingCombo?Ru[t.endingCombo]:null;return e?{title:e.title,subtitle:e.subtitle,stamp:e.stamp,text:t.endingText??gl[t.ending??"nameless"].text,tone:e.tone}:gl[t.ending??"nameless"]}const xl=["裏八咫","財團 Z","至高智人學院","異端審判庭","無所屬","第七區自治會","黑市同盟","海岸自衛隊","代行者","流浪者"],Ed={裏八咫:"Project Ignis 的執行機構。負責選別、刻印、回收與封鎖消息；黑服是它的處決部隊。","財團 Z":"把超越者當成資產與武器的巨型企業。進行人造超越者、玻色子同調與神造計劃。",至高智人學院:"財團 Z 培養兵器的教育機構，將選別視為野外測試，而非犯罪。",異端審判庭:"直屬教皇的秘密組織，處理最墮落的異端。表面已消失，實際仍行走於黑暗。",無所屬:"不屬於任何正式組織的人。刑警、殺人鬼、逃亡者與最終首領都可能在此。",第七區自治會:"在裏八咫與財團 Z 之間維持灰色秩序的地方組織。",黑市同盟:"拍賣器官、終端與情報的地下網絡。白鳥理世是其中最有名的舞台。",海岸自衛隊:"負責封鎖港口與處理海上回收物的武裝單位。",代行者:"異端審判庭的特殊超越者，被視為神怒與神恩的代理人。同一時間不超過十二人。",流浪者:"沒有登記城市、沒有固定終端的人。他們通常比任何人都更早察覺封鎖線。"},Td=["雨宮","黑川","綾瀬","白鳥","神田","久我","三浦","末永","小宮","橋本"],yy=["澪","巌","凍","理世","隼人","千歲","湊","燈","朔","雪"],Ad=["執行官","研究者","賞金獵人","情報販子","護衛","醫療兵","記者","學生","黑市商人","逃亡者"],wd=["肉體強化","結晶操縱","記憶篡改","電磁加速","影子搬運","體溫掠奪","聲音暗示","金屬操作","創傷共鳴","空間折疊"],Rd=["INTJ","INTP","ENTJ","ENTP","INFJ","INFP","ENFJ","ENFP","ISTJ","ISFJ","ESTJ","ESFJ","ISTP","ISFP","ESTP","ESFP"],Cd=["雨中的刀","沒有影子的人","玻璃聖母","舞臺女王","無冕的最強對手","第七區的幽靈","黑色迴路","不會說話的證人","編號 13","灰燼收藏家"],Ld=["記得所有見過的面孔，卻不記得自己的生日。","把每一次交易都寫在一本沒有頁碼的筆記本上。","相信裏八咫最終會留下一個位置給自己。","從財團 Z 的實驗室逃出來，身上還有編號。","不擅長說謊，所以選擇不說話。","把殺人當成一種需要準時完成的工作。","在找一個已經被回收的家人。","對神田隼人抱持近乎宗教的敬意。","擁有一把不屬於這個時代的鑰匙。","每天都會去同一家便利店買同一種飯糰。"],Ju=["神田隼人","黑川巌","綾瀬凍","白鳥理世","王冠"],xy=["最強對手","絞肉機","玻璃聖母","舞臺女王","侵蝕王冠"],Sy=["魔劍士","鐵血縛鎖","冰棺聖母","偽神歌姬","終末冠者"],My=["無所屬","無所屬","至高智人學院","黑市同盟","無所屬"],Ey=["刑警","殺人鬼","結晶使","情報商人","最終首領"],Ty=["RUNELORD","GEHENNA CHAIN","GLASS MADONNA","FALSE IDOL","CROWNED PROPHET"],Ay=["以普通人的身分終結超越者犯罪，並找出小田川知世事件的真相。","享受被裏八咫承認的殺戮，證明自己的肉體比任何顯現都更適合這個世界。","帶妹妹離開選別，即使必須把整座城市凍成一座沒有出口的棺。","把群眾的愛變成武器，讓所有人都自願走進她準備好的舞台。","證明新人類不需要人類的許可，讓舊世界在自己的王冠下結束。"],wy=["黃昏","零時","黑帳","白晝","鏽蝕","空席","第七","無名","逆鱗","終末"],Ry=["觀測者","拾骨者","行刑人","收藏家","引路人","守夜人","背叛者","殘響","聖徒","記錄者"],Cy=["DUSK","ZERO","BLACKLEDGER","DAYBREAK","RUSTED","EMPTY","SEVENTH","NAMELESS","REVERSE","TERMINAL"],Ly=["OBSERVER","BONEPICKER","EXECUTIONER","COLLECTOR","GUIDE","NIGHTWATCH","TRAITOR","ECHO","SAINT","RECORDER"],Pd=["想活著離開，但更想帶走一個能證明自己存在過的人。","相信只要殺夠多人，裏八咫就會給自己一個真正的名字。","在找一個被回收的家人，願意為此出賣任何秘密。","想讓財團 Z 付出代價，即使自己也會被一起燒掉。","只想確認神田隼人是不是也會流血。","把每一次交易都當成最後一次，因為她從不相信明天。","想建立一個沒有選別的城市，哪怕要先把城市燒空。","在記錄所有死者的名字，因為沒有人會替他們記。","想證明顯現不是病，而是一種更高級的人類。","已經沒有想做的事，只剩下不想讓別人如願。"],Id=["因此主動接近每一位外來者。","因此從不拒絕任何一場戰鬥。","因此把情報當成唯一可靠的貨幣。","因此在最後一刻總會留下不該留的破綻。","因此對所有權力都抱持同一種冷淡的恨。","因此把善意當成一種需要驗證的陷阱。","因此比任何人更害怕安靜下來的時刻。","因此相信只要名字被記住，就不算真的死去。","因此一次又一次回到同一個地方。","因此在雨停之前不會離開。"],Dd=["岳","冰","玲","迅","煌"];function Py(t){const e=`${Td[Math.floor(t/10)]}${yy[t%10]}`;return Ju.includes(e)?`${Td[Math.floor(t/10)]}${Dd[t%Dd.length]}`:e}const ts=Array.from({length:100},(t,e)=>{const n=e<5,i=n?Ju[e]:Py(e);return{id:`npc-${String(e+1).padStart(3,"0")}`,name:i,codename:n?Sy[e]:`${wy[Math.floor(e/10)]}・${Ry[e%10]}`,codenameEn:n?Ty[e]:`${Cy[Math.floor(e/10)]} ${Ly[e%10]}`,intention:n?Ay[e]:`${Pd[e%Pd.length]}${Id[Math.floor(e/10)%Id.length]}`,alias:n?xy[e]:Cd[e*3%Cd.length],faction:n?My[e]:xl[e%xl.length],role:n?Ey[e]:Ad[e*7%Ad.length],mbti:Rd[e*11%Rd.length],ability:n&&e===0?"最強對手":wd[e*5%wd.length],threat:n&&e===0?5:e*7%5+1,affection:e*17%101,note:n&&e===0?"他是你所能遇見的最強對手；即使是史上最強的超限者，也無法在正面戰鬥中勝過他。":Ld[e%Ld.length],spriteSeed:`roster:${e}:${i}`,portrait:n?["kanda","kurokawa","ayase","shiratori","crown"][e]:void 0,important:n}});ts.filter(t=>t.important);const Iy=new Set(["kurokawa","ayase","crown","kanda","shiratori"]);function Dy(t,e){const n=`<ellipse cx="50" cy="111" rx="31" ry="8" fill="#0b0a09" opacity=".28"/>
+她掛了電話。`))}]},bl=[lb,kb,Ob,Fb,Bb,$b,zb,Hb,Gb,Vb,Wb,Xb,qb,Yb,Zb,Kb,Jb,Qb,jb,ey,ty,ny,iy,ay,ry,sy,oy,ly,cb,db,ub,hb,fb,pb,mb,gb,_b,vb,bb,yb,xb,Sb,Mb,Eb,Tb,Ab,wb,Ib,Rb,Cb,Lb,Pb,Db,...Ub];Yu.push({id:"r_skirmish",at:0,random:!0,chapter:"插曲",title:"不屬於你的戰鬥",scene:"street",text:`街角的自動販賣機被撞翻。
+
+兩個超越者正在雨裡互相撕扯，路過的人全都低下頭。
+
+其中一個看見你，咧嘴笑了。「喂。要加入嗎？」
+
+另一個人的血已經流到你的鞋尖。
+
+他們的動作都很粗糙，像剛覺醒不久的人——招式沒有練過，全靠本能。
+
+販賣機裡的飲料滾了一地，有一罐在你腳邊停下，標籤上印著財團Z 的標誌。
+
+你注意到他們的終端：一個還亮著，一個已經黑了。
+
+黑掉的那個，手腕上沒有紅光。
+
+他已經死了，還在被拖著打。`,choices:[{id:"join",label:"加入戰鬥。",hint:"進入戰鬥／可獲得刻印",apply:t=>(xi(t,"kurokawa"),oe("你踏進水窪。「現在，」你說，「輪到我了。」"))},{id:"evade",label:"避開這場戰鬥。",hint:"敏捷檢定 DC 14／失敗會受傷",apply:t=>Je(t,"dexterity",14,"在混戰中穿過街角").ok?(X(t,-2,"你沒有留下痕跡"),Ae("你貼著牆走過去。身後的碰撞聲很遠，像另一個城市的事。")):(Qt(t,1,"你被飛來的碎玻璃劃傷"),qe("你退得太慢。一塊碎玻璃擦過你的臉，血混進雨裡。"))},{id:"watch",label:"站在暗處看完。",hint:"情報 +1／警戒 +2",apply:t=>(be(t,1,"你記下了兩個超越者的戰鬥方式"),X(t,2,"你停留在現場"),oe("你沒有出手。你看見其中一個人怎麼倒下，也看見另一個人怎麼補上最後一腳。這些都會有用。"))}]});const Zu=Yu,Wl=new Map([...bl,...Zu].map(t=>[t.id,t]));function Ku(t,e){t.phase!=="play"||t.pending||(t.stance=e)}function cy(t,e){t.phase==="play"&&t.bonds.some(n=>n.id===e&&n.alive)&&(t.contactTarget=e,t.stance="contact")}function yl(t,e){[0,1,2,4,8].includes(e)&&(t.speed=e)}function dy(t){for(const e of bl)if(!(e.random||t.eventsDone.includes(e.id))&&e.at===t.hour&&(!e.condition||e.condition(t)))return e;for(const e of bl)if(!(e.random||t.eventsDone.includes(e.id))&&e.at<=t.hour&&e.condition&&e.condition(t))return e;return null}function uy(t){const e=Zu.filter(n=>!t.eventsDone.includes(n.id)&&(!n.condition||n.condition(t)));return e.length?e[sn(t,0,e.length-1)]:null}function Xl(t){if(t.phase!=="play"||t.pending||t.battle||t.ending)return;if(t.hour>=ku){_o(t,Wl.get("closing"));return}t.hour+=1,hy(t);const e=dy(t);if(e){_o(t,e),vo(t);return}if(t.hour>=t.randomNextHour){const n=uy(t);if(n){_o(t,n),t.randomNextHour=t.hour+sn(t,8,11),vo(t);return}t.randomNextHour=t.hour+3}gy(t),vo(t)}function hy(t){for(const e of t.rivals)e.status==="active"&&(e.marks=Math.round((e.marks+e.rate)*10)/10)}function _o(t,e){if(t.pending={id:e.id},e.id.startsWith("manifest_")&&(!t.manifestOffers||t.manifestOffers.length===0)&&Fv(t),e.id==="tetsu_dead"){const n=t.rivals.find(i=>i.id==="tetsu");n&&(n.status="dead",n.note="死在第七號碼頭。刻印被裏八咫回收。")}if(e.id==="kurokawa_arrested"){const n=t.rivals.find(i=>i.id==="kurokawa");n&&(n.status="arrested",n.note="被神田隼人逮捕。刻印全數回收。")}if(e.id==="kurokawa_massacre"){const n=t.rivals.find(i=>i.id==="kurokawa");n&&t.player.flags.kurokawa_defeated&&(n.status="dead",n.note="倒在常夜中央通。至死都在笑。")}if(e.id==="ayase_proposal"){const n=t.rivals.find(i=>i.id==="ayase");n&&t.player.flags.ayase_dead&&(n.status="dead")}}function vo(t){if(t.phase==="play"&&(t.player.encroachment>=100&&fy(t),t.phase==="play")){if(t.hour>=48&&(!t.player.wanted&&t.player.heat>=70&&(t.player.wanted=!0,t.player.wantedAt=t.hour,Be(t,"danger","神田隼人已將你列為指名手配。包圍網開始收縮。")),t.player.wanted&&t.player.heat<35&&(t.player.wanted=!1,Be(t,"system","警戒指數降到閾值以下。神田暫時撤回對你的直接追捕。"))),t.hour===24||t.hour===48||t.hour===60){const e=ni(t);Be(t,"rival",`排名更新：第 ${e.rank}／${e.total}。領先者 ${e.list[0].name}（${Math.floor(e.list[0].marks)} 刻印）。`)}py(t)}}function fy(t){const e=15+Math.floor((t.player.encroachment-100)/5);Je(t,"constitution",e,"抵抗侵蝕失控",gi(t).has("constitution")?2:0).ok?Be(t,"bond","你把那個聲音壓回去了。至少這一小時。"):(t.player.collapse+=1,Be(t,"danger",`失控 ${t.player.collapse}/3。你的身體做了你不記得的事。`),t.player.collapse>=3&&rn(t,"monster"))}function py(t){t.player.heat>=70&&!t.player.flags.warn70&&(t.player.flags.warn70=!0,Be(t,"danger",t.hour>=48?"警戒指數 70：神田的檔案上出現了你的代號。":"警戒指數 70：你的代號開始在參賽者之間流傳。")),t.player.heat>=90&&!t.player.flags.warn90&&(t.player.flags.warn90=!0,Be(t,"danger","警戒指數 90：裏八咫已將你標記為優先回收對象。")),t.player.encroachment>=100&&!t.player.flags.warn100&&(t.player.flags.warn100=!0,Be(t,"danger","侵蝕率 100%：每一小時，你都要重新說服自己還是人。"))}const Md=["城市沒有因為你的倒數而停下來。上班族撐著傘走過，沒有人抬頭。","便利商店的自動門反覆開合。店員在補貨，電視在播天氣。","遠處有警笛，但沒有往這個方向來。暫時。","雨水把牆上的塗鴉沖成一片模糊的紅。","一隻烏鴉停在電線上，歪著頭看你，像在看一份不太有趣的報告。","你經過一面玻璃，發現自己已經習慣不去看倒影。","車站廣播念著陌生的站名。每一班車都通往這座城市的其他角落。","清潔隊正在沖洗昨晚的血跡。水混著泡沫流進排水溝。","有人在騎樓下賣傘。他一個晚上沒賣出幾把，因為雨已經下得太久。","早餐店的鐵門拉開一半，蒸氣湧出來，帶著醬油和豆漿的味道。","一台提款機吐出一張收據，被風吹到你腳邊。上面的餘額不夠住一晚旅館。","兩個高中生蹲在便利商店門口分一碗關東煮。他們說話的聲音很小，笑聲很大。","你數了三個路口、四個監視器，沒有一個對著你。這讓你更不安。","醫院的急診燈亮著。門口有人抽菸，抽到一半就哭了，然後又點了一根。","計程車司機把窗搖下來問你要不要搭車。你說不用。他把窗搖回去，沒有多問。","天橋下有人在睡覺，被子是拆開的紙箱。他的呼吸很穩。"];function my(t,e){const n=Au.get(e);!n||t.phase!=="play"||(t.districtId=e,Be(t,"system",`移動到${n.name}（${n.en}）。${n.effect}`))}function gy(t){const e=Hi(t);switch(t.stance){case"lie_low":{X(t,t.player.flags?.streetwise?-4:-3,"你避開主要街道"),t.hour%2===0&&yi(t,t.player.flags?.field_medicine?2:1,"你在廢棄網咖睡了兩小時"),Be(t,"action",`你躲進${e.tag.split("・")[1]??"城市"}的陰影裡。終端上的警戒指數慢慢下降。`);break}case"hunt_normal":{Tt(t,1,"你處理了一個落單的普通人"),X(t,5,"屍體被發現"),t.player.killsNormal+=1,t.player.encroachment>=100&&(Tt(t,2,"你回過神時，現場已經沒有活人"),X(t,5,"失控殺戮留下大量痕跡"),De(t,2)),Be(t,"action","你沒有用顯現。只是刀，和一個來不及喊出聲的人。");break}case"power_hunt":{const i=Jt(t),a=t.player.abilityId==="ash"||(t.player.manifested??[]).includes("ash")?3:2;Tt(t,a,"顯現獵殺完成"),X(t,7,"顯現的殘留痕跡"),t.player.killsNormal+=1,Be(t,"action",`「${e.name}」的某一條街安靜了。刻印 +${a}，侵蝕 +${i}。`);break}case"hunt_overman":{const i=Jt(t),a=13+Math.floor(t.hour/30),r=Je(t,As(t),a,"狩獵落單超越者",ur(t));if(r.ok){const s=r.nat20?15:10;Tt(t,s,r.nat20?"你壓倒性擊殺了一名超越者":"你殺死了一名超越者"),X(t,4,"超越者屍體被發現"),t.player.killsOverman+=1,Be(t,"action","對方的顯現在你身上留下灼痕。你拿走他的刻印，也拿走他的終端。")}else Vu(t,5+Math.floor(t.hour/20),2,"超越者的反擊"),X(t,4,"戰鬥留下血跡"),Be(t,"danger","對方比你更快。你逃走了，但傷口還在流血。");Be(t,"system",`這次狩獵消耗了 ${i} 點侵蝕。`);break}case"investigate":{const i=11+(t.player.heat>=50?2:0);Je(t,"wisdom",i,"調查城市異象").ok?(be(t,1,"你拼湊出一條線索"),X(t,1,"你出現在不該出現的地方"),Be(t,"action","你找到了另一名超越者的移動路線，還有一張被撕掉一半的裏八咫地圖。")):(X(t,2,"你問了太多問題"),Be(t,"action","你花了一整個小時，只確認了一件事：有人比你更早來過。"));break}case"contact":{let i=t.contactTarget;if(i||(i=t.bonds.filter(a=>a.alive).sort((a,r)=>r.level-a.level)[0]?.id??null),i){const a=hr(t,i);Be(t,"action",a)}else Be(t,"danger","你打開通訊錄，發現沒有任何一個號碼還能撥通。");break}case"destroy":{const i=Jt(t,6),a=t.player.abilityId==="ash"||(t.player.manifested??[]).includes("ash")?3:2;Tt(t,a,"城市破壞被折算為刻印"),X(t,9,"大規模破壞"),Be(t,"action",`你讓一棟無人建築倒下。裏八咫把混亂記成 ${a} 枚刻印。侵蝕 +${i}。`);break}}const n=Au.get(t.districtId);n&&(n.intel>0&&t.stance==="investigate"&&be(t,n.intel,`${n.name}的額外線索`),n.marks>0&&(t.stance==="hunt_normal"||t.stance==="hunt_overman"||t.stance==="destroy")&&Tt(t,n.marks,`${n.name}的獵場加成`),n.heat!==0&&X(t,n.heat,`${n.name}的區域風險`),t.stance==="lie_low"&&n.id==="residential"&&X(t,-1,"舊住宅區沒有監視器"),n.id==="academy"&&t.stance==="power_hunt"&&De(t,1,"學院特區的實驗殘留")),t.hour%3===0&&Be(t,"story",Md[(t.hour/3+t.cityId.length)%Md.length].replace("城市",e.name))}function _y(t,e,n){if(t.phase!=="play"||!t.pending||t.pending.id!==e||t.pending.result)return;const i=Wl.get(e);if(!i)return;const a=Xu(i,t).find(s=>s.id===n);if(!a||a.requires&&!a.requires(t))return;t.lastRoll=null;const r=a.apply(t);if(t.eventsDone.push(e),t.battle){t.pending=null;return}t.ending||(t.pending={id:e,result:rb(e,n,r.text),resultTone:r.tone,title:i.title})}function vy(t){t.pending?.result&&(t.pending=null)}function ql(t){if(!t.pending||t.battle)return null;const e=Wl.get(t.pending.id);if(!e)return null;const n=Xu(e,t).map(i=>({id:i.id,label:i.label,hint:i.hint,disabled:!!i.requires&&!i.requires(t)}));return{id:e.id,chapter:e.chapter,title:e.title,speaker:e.speaker,portrait:e.portrait,scene:e.scene,text:sb(e,t),choices:n,result:t.pending.result,resultTone:t.pending.resultTone}}function Sa(t){const e=Math.floor(t/24)+1,n=t%24,i=`${String(n).padStart(2,"0")}:00`;return{day:e,time:i,full:`第 ${e} 天 ${i}`}}function nt(t){try{if(typeof localStorage>"u")return;localStorage.setItem("overman-erosion-city.save.v1",JSON.stringify(t))}catch{}}function Yl(){var t,e,n,i,a,r,s,o,l,c,d,h,u,f,v,y,g,p,w,N,x,E,T,C,m,S,L;try{if(typeof localStorage>"u")return null;const R=localStorage.getItem("overman-erosion-city.save.v1");if(!R)return null;const M=JSON.parse(R);if(!M||M.version!==1||!M.phase||M.phase==="play"&&!M.player)return null;if(M.creation&&((t=M.creation).mainStat??(t.mainStat=null),(e=M.creation).coreEpithet??(e.coreEpithet="未登錄的迴路"),(n=M.creation).abilityChoices??(n.abilityChoices=[]),M.creation.step==="questions"&&(!M.creation.questionIds||M.creation.questionIds.length===0)&&(M.creation.questionIds=Nu(()=>Math.random())),(i=M.creation).questionIds??(i.questionIds=[])),M.player){(a=M.player).manifested??(a.manifested=[]),(r=M.player).armorId??(r.armorId="jacket"),(s=M.player).coreEpithet??(s.coreEpithet="未登錄的迴路");const I={body:"strength",reflex:"dexterity",intellect:"intelligence",will:"constitution",perception:"wisdom",charm:"charisma",strength:"strength",dexterity:"dexterity",constitution:"constitution",intelligence:"intelligence",wisdom:"wisdom",charisma:"charisma"},D=G=>{const te={strength:0,dexterity:0,constitution:0,intelligence:0,wisdom:0,charisma:0};for(const[q,Q]of Object.entries(G??{})){const ne=I[q];ne&&(te[ne]=Number(Q)||0)}return te};M.player.stats=D(M.player.stats),(o=M.player).skills??(o.skills=[]),(l=M.player).codenameEn||(l.codenameEn=ar(M)),(c=M.player).gender??(c.gender="unspecified"),(d=M.player).avatar??(d.avatar=null),(h=M.player).ultimateId??(h.ultimateId="edge"),M.creation&&((u=M.creation).codenameEn||(u.codenameEn=ar(M)),(f=M.creation).gender??(f.gender="unspecified"),(v=M.creation).avatar??(v.avatar=null),(y=M.creation).ultimateId??(y.ultimateId="edge"),(g=M.creation).ultimateChoices??(g.ultimateChoices=[])),M.creation&&(M.creation.stats=D(M.creation.stats));const B=String(M.player.mainStat??"strength");M.player.mainStat=I[B]??"strength";const Y=String(M.creation?.mainStat??"");M.creation&&(M.creation.mainStat=Y?I[Y]??null:null),(p=M.player).mainStat??(p.mainStat=Object.keys(M.player.stats).sort((G,te)=>M.player.stats[te]-M.player.stats[G])[0]),(w=M.player).flags??(w.flags={})}if(M.manifestOffers??(M.manifestOffers=[]),M.battle??(M.battle=null),M.districtId??(M.districtId="station"),M.endingCombo??(M.endingCombo=null),M.battle){(N=M.battle).introSeen??(N.introSeen=!0),(x=M.battle).allies??(x.allies=[]),(E=M.battle).civilians??(E.civilians=[]),(T=M.battle).maxRounds??(T.maxRounds=null),(C=M.battle).finalBattle??(C.finalBattle=!1),(m=M.battle).ultimateUsed??(m.ultimateUsed=!1),(S=M.battle).shield??(S.shield=0),(L=M.battle).selectedSkill??(L.selectedSkill=null);for(const I of M.battle.enemies??[])I.skills??(I.skills=[]),I.strength??(I.strength=I.attack),I.dexterity??(I.dexterity=I.attack)}return M.battle&&!Array.isArray(M.battle.enemies)&&(M.battle=null),M}catch{return null}}function Zl(){try{typeof localStorage<"u"&&localStorage.removeItem("overman-erosion-city.save.v1")}catch{}}function by(t){const e=t.endingCombo?Ru[t.endingCombo]:null;return e?{title:e.title,subtitle:e.subtitle,stamp:e.stamp,text:t.endingText??gl[t.ending??"nameless"].text,tone:e.tone}:gl[t.ending??"nameless"]}const xl=["裏八咫","財團 Z","至高智人學院","異端審判庭","無所屬","第七區自治會","黑市同盟","海岸自衛隊","代行者","流浪者"],Ed={裏八咫:"Project Ignis 的執行機構。負責選別、刻印、回收與封鎖消息；黑服是它的處決部隊。","財團 Z":"把超越者當成資產與武器的巨型企業。進行人造超越者、玻色子同調與神造計劃。",至高智人學院:"財團 Z 培養兵器的教育機構，將選別視為野外測試，而非犯罪。",異端審判庭:"直屬教皇的秘密組織，處理最墮落的異端。表面已消失，實際仍行走於黑暗。",無所屬:"不屬於任何正式組織的人。刑警、殺人鬼、逃亡者與最終首領都可能在此。",第七區自治會:"在裏八咫與財團 Z 之間維持灰色秩序的地方組織。",黑市同盟:"拍賣器官、終端與情報的地下網絡。白鳥理世是其中最有名的舞台。",海岸自衛隊:"負責封鎖港口與處理海上回收物的武裝單位。",代行者:"異端審判庭的特殊超越者，被視為神怒與神恩的代理人。同一時間不超過十二人。",流浪者:"沒有登記城市、沒有固定終端的人。他們通常比任何人都更早察覺封鎖線。"},Td=["雨宮","黑川","綾瀬","白鳥","神田","久我","三浦","末永","小宮","橋本"],yy=["澪","巌","凍","理世","隼人","千歲","湊","燈","朔","雪"],Ad=["執行官","研究者","賞金獵人","情報販子","護衛","醫療兵","記者","學生","黑市商人","逃亡者"],wd=["肉體強化","結晶操縱","記憶篡改","電磁加速","影子搬運","體溫掠奪","聲音暗示","金屬操作","創傷共鳴","空間折疊"],Rd=["INTJ","INTP","ENTJ","ENTP","INFJ","INFP","ENFJ","ENFP","ISTJ","ISFJ","ESTJ","ESFJ","ISTP","ISFP","ESTP","ESFP"],Cd=["雨中的刀","沒有影子的人","玻璃聖母","舞臺女王","無冕的最強對手","第七區的幽靈","黑色迴路","不會說話的證人","編號 13","灰燼收藏家"],Ld=["記得所有見過的面孔，卻不記得自己的生日。","把每一次交易都寫在一本沒有頁碼的筆記本上。","相信裏八咫最終會留下一個位置給自己。","從財團 Z 的實驗室逃出來，身上還有編號。","不擅長說謊，所以選擇不說話。","把殺人當成一種需要準時完成的工作。","在找一個已經被回收的家人。","對神田隼人抱持近乎宗教的敬意。","擁有一把不屬於這個時代的鑰匙。","每天都會去同一家便利店買同一種飯糰。"],Ju=["神田隼人","黑川巌","綾瀬凍","白鳥理世","王冠"],xy=["最強對手","絞肉機","玻璃聖母","舞臺女王","侵蝕王冠"],Sy=["魔劍士","鐵血縛鎖","冰棺聖母","偽神歌姬","終末冠者"],My=["無所屬","無所屬","至高智人學院","黑市同盟","無所屬"],Ey=["刑警","殺人鬼","結晶使","情報商人","最終首領"],Ty=["RUNELORD","GEHENNA CHAIN","GLASS MADONNA","FALSE IDOL","CROWNED PROPHET"],Ay=["以普通人的身分終結超越者犯罪，並找出小田川知世事件的真相。","享受被裏八咫承認的殺戮，證明自己的肉體比任何顯現都更適合這個世界。","帶妹妹離開選別，即使必須把整座城市凍成一座沒有出口的棺。","把群眾的愛變成武器，讓所有人都自願走進她準備好的舞台。","證明新人類不需要人類的許可，讓舊世界在自己的王冠下結束。"],wy=["黃昏","零時","黑帳","白晝","鏽蝕","空席","第七","無名","逆鱗","終末"],Ry=["觀測者","拾骨者","行刑人","收藏家","引路人","守夜人","背叛者","殘響","聖徒","記錄者"],Cy=["DUSK","ZERO","BLACKLEDGER","DAYBREAK","RUSTED","EMPTY","SEVENTH","NAMELESS","REVERSE","TERMINAL"],Ly=["OBSERVER","BONEPICKER","EXECUTIONER","COLLECTOR","GUIDE","NIGHTWATCH","TRAITOR","ECHO","SAINT","RECORDER"],Pd=["想活著離開，但更想帶走一個能證明自己存在過的人。","相信只要殺夠多人，裏八咫就會給自己一個真正的名字。","在找一個被回收的家人，願意為此出賣任何秘密。","想讓財團 Z 付出代價，即使自己也會被一起燒掉。","只想確認神田隼人是不是也會流血。","把每一次交易都當成最後一次，因為她從不相信明天。","想建立一個沒有選別的城市，哪怕要先把城市燒空。","在記錄所有死者的名字，因為沒有人會替他們記。","想證明顯現不是病，而是一種更高級的人類。","已經沒有想做的事，只剩下不想讓別人如願。"],Id=["因此主動接近每一位外來者。","因此從不拒絕任何一場戰鬥。","因此把情報當成唯一可靠的貨幣。","因此在最後一刻總會留下不該留的破綻。","因此對所有權力都抱持同一種冷淡的恨。","因此把善意當成一種需要驗證的陷阱。","因此比任何人更害怕安靜下來的時刻。","因此相信只要名字被記住，就不算真的死去。","因此一次又一次回到同一個地方。","因此在雨停之前不會離開。"],Dd=["岳","冰","玲","迅","煌"];function Py(t){const e=`${Td[Math.floor(t/10)]}${yy[t%10]}`;return Ju.includes(e)?`${Td[Math.floor(t/10)]}${Dd[t%Dd.length]}`:e}const ts=Array.from({length:100},(t,e)=>{const n=e<5,i=n?Ju[e]:Py(e);return{id:`npc-${String(e+1).padStart(3,"0")}`,name:i,codename:n?Sy[e]:`${wy[Math.floor(e/10)]}・${Ry[e%10]}`,codenameEn:n?Ty[e]:`${Cy[Math.floor(e/10)]} ${Ly[e%10]}`,intention:n?Ay[e]:`${Pd[e%Pd.length]}${Id[Math.floor(e/10)%Id.length]}`,alias:n?xy[e]:Cd[e*3%Cd.length],faction:n?My[e]:xl[e%xl.length],role:n?Ey[e]:Ad[e*7%Ad.length],mbti:Rd[e*11%Rd.length],ability:n&&e===0?"最強對手":wd[e*5%wd.length],threat:n&&e===0?5:e*7%5+1,affection:e*17%101,note:n&&e===0?"他是你所能遇見的最強對手；即使是史上最強的超限者，也無法在正面戰鬥中勝過他。":Ld[e%Ld.length],spriteSeed:`roster:${e}:${i}`,portrait:n?["kanda","kurokawa","ayase","shiratori","crown"][e]:void 0,important:n}});ts.filter(t=>t.important);const Iy=new Set(["kurokawa","ayase","crown","kanda","shiratori"]);function Dy(t,e){const n=`<ellipse cx="50" cy="111" rx="31" ry="8" fill="#0b0a09" opacity=".28"/>
     <ellipse cx="50" cy="108" rx="29" ry="7" fill="#1b1714" stroke="#141210" stroke-width="2"/>
     <ellipse cx="50" cy="105" rx="22" ry="3.5" fill="#3a332d" opacity=".55"/>`,i=`<path d="M37 92 L41 104 L34 107 L28 94Z" fill="#1c1b1b" stroke="#141210" stroke-width="2.5"/>
     <path d="M63 92 L59 104 L66 107 L72 94Z" fill="#1c1b1b" stroke="#141210" stroke-width="2.5"/>`,a=` role="img" aria-label="${e.name}"`;return t==="kurokawa"?`<svg class="chibi-svg" viewBox="0 0 100 124"${a}>
