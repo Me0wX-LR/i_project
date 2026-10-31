@@ -4785,6 +4785,8 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 
 至少今晚沒有。`,n.reward="escape";return}else Oe(t,"你沒能拉開距離。","bad")}n.status==="active"&&u()}function Qv(t){const e=t.battle;!e||!e.selectedSkill||Vv(t,e.selectedSkill,e.targetId??void 0)}function jv(t){const e=t.battle;if(!e||e.status!=="active"||e.phase!=="action"||!e.awaiting||e.ultimateUsed)return;const n=fs.get(t.player.ultimateId??"edge")??fs.get("edge"),i=e.enemies.find(d=>d.id===e.targetId&&d.alive)??jt(e)[0];if(!i&&n.type!=="heal"&&n.type!=="shield"){pr(t);return}const a=i?.plot??0,r=a===0?0:Math.abs((e.playerPlot??0)-a);if((n.type==="melee"||n.type==="true")&&r>1){Oe(t,`${n.name}的間合不足：目標在 ${r} 階之外。`,"bad");return}const s=n.type==="ranged"?jt(e).filter(d=>((d.plot??0)===0?0:Math.abs((e.playerPlot??0)-(d.plot??0)))<=2||(d.plot??0)===0):[];if(n.type==="ranged"&&s.length===0){Oe(t,"萬象灰雨找不到落在間合內的目標。","bad");return}e.ultimateUsed=!0,e.awaiting=!1;const o=pi(t,As(t)),l=ur(t);let c=!1;if(n.type==="shield")e.shield=Math.max(e.shield,9),Oe(t,"絕對城塞展開。九點護盾吸收所有傷害，直到破碎。","good");else if(n.type==="extra")c=!0,e.awaiting=!0,e.playerPlot=e.playerPlot??0,Oe(t,"零刻交換。時間沒有前進，但你多了一次行動。","good");else if(n.type==="true"&&i)Qt(t,2,"熵印焚身的代價"),t.player.hp<=0?(e.status="lost",e.result="你把自己的血燒乾了。熵印焚身完成，但你沒有剩下能看見結果的眼睛。",e.awaiting=!1):(_i(t,i,6,"熵印焚身造成 6 點無視 AC 的真實傷害。"),Oe(t,"熵印焚身：以血換取必然的傷口。","danger"));else if(n.type==="gravity"){for(const d of jt(e))d.plot=e.playerPlot??0;e.momentum=Math.max(e.momentum,2),c=!0,e.awaiting=!0,Oe(t,"重力井把所有人的 PLOT 壓到同一階。下一次攻擊 +2。","good")}else if(n.type==="heal"){const d=t.player.hp;t.player.hp=Math.min(t.player.maxHp,t.player.hp+5),t.player.encroachment=Math.max(0,t.player.encroachment-5),Oe(t,`因果逆行：肉體 +${t.player.hp-d}，侵蝕 -5。`,"good")}else if(n.type==="melee"&&i){const d=Yt(t),h=d+o+l+6;d===20||h>=i.ac?_i(t,i,5+Math.floor(l/2),`絕影一閃命中（無視 fumble）。d20 ${d} + ${o} + ${l} + 6 = ${h}。`):Oe(t,`絕影一閃落空。d20 ${d} + ${o} + ${l} + 6 = ${h} < AC ${i.ac}。`,"bad")}else if(n.type==="ranged"){for(const d of s){const h=Yt(t),u=h+o+l;h===20||u>=d.ac?_i(t,d,2,`萬象灰雨命中 ${d.name}。d20 ${h} + ${o} + ${l} = ${u}。`):Oe(t,`萬象灰雨被 ${d.name} 閃開。d20 ${h} + ${o} + ${l} = ${u}。`,"bad")}Oe(t,"萬象灰雨覆蓋了整個間合。","danger")}e.status==="active"&&!c&&(e.queueIndex+=1,fr(t))}function eb(t,e){const n=t.battle;if(!n||n.status!=="active"||n.phase!=="action"||!n.awaiting)return;const i=n.civilians.find(a=>a.alive&&a.status==="hiding");i&&(n.awaiting=!1,n.selectedSkill=null,e==="protect"?(i.status="saved",t.player.flags.saved_civilian=!0,Z(t,-4,`你把${i.name}藏到安全的地方`),Oe(t,`你掩護${i.name}離開。警戒 -4。`,"good")):(i.status="killed",t.player.killsNormal+=1,Tt(t,1,`你殺死了一個普通人（${i.name}）`),Z(t,10,`你在戰鬥中殺死${i.name}`),Ue(t,3,"你跨過了那條線"),Oe(t,`你殺了${i.name}。終端記下 +3 刻印。`,"bad")),n.queueIndex+=1,fr(t))}function tb(t){const e=t.battle;if(e){if(e.status==="won"&&e.reward)if(e.reward==="kurokawa"){Tt(t,15,"你擊倒了黑川巌與他的保鑣"),Z(t,5,"鬧區發生超越者戰鬥"),t.player.killsOverman+=1,t.player.flags.kurokawa_defeated=!0;const n=t.rivals.find(i=>i.id==="kurokawa");n&&(n.status="dead",n.trueNameKnown=!0,Fe(t,"story","黑川在倒下前說出了自己的真名：黑川巌。"))}else if(e.reward==="ayase"){Tt(t,20,"你擊倒了綾瀬凍"),Z(t,7,"頂樓發生超越者戰鬥"),t.player.killsOverman+=1,t.player.flags.ayase_dead=!0;const n=t.rivals.find(i=>i.id==="ayase");n&&(n.status="dead",n.trueNameKnown=!0,Fe(t,"story","綾瀬在冰晶散去後，低聲說出了真名：綾瀬凍。"))}else e.reward==="crown"?(Tt(t,30,"你重創了王冠"),Z(t,10,"碼頭發生大規模顯現戰"),t.player.flags.crown_injured=!0,t.player.flags.crown_name_known=!0,Fe(t,"story","王冠在碎裂前露出真名：王冠。")):e.reward==="kanda_escape"&&(t.player.wanted=!1);if(e.status==="lost"&&e.endingOnLoss){rn(t,e.endingOnLoss),t.battle=null;return}if(e.status==="lost"&&t.player.hp<=0){rn(t,"dead"),t.battle=null;return}Fe(t,"story",`戰鬥結束：${e.enemies.map(n=>n.name).join("、")}（${e.status==="won"?"勝利":e.status==="escaped"?"脫離":"敗北"}）。`),t.battle=null,t.speed=t.speed||1}}const nb={opening:`十一月的雨沒有停過。你抵達新湊市的時候，鞋裡已經進了水，每走一步都發出很輕的、像有人在後面跟著的聲音。
 
+車站前的電子鐘停在 23:47。你看著它跳了一分鐘，才確定它沒有壞，只是慢。
+
 口袋裡有一封黑信封。沒有寄件人，沒有郵票，只有一行銀色的字，印得比信封本身還深。
 
 「於十一月三日零時前抵達指定城市。不得告知任何人。」
@@ -4799,7 +4801,13 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 
 「本次選別由裏八咫監督。違規者，與其羈絆者，一併處理。」
 
+你查過「裏八咫」這個名字。戶籍、公司登記、公開財報，什麼都沒有。它像一個只存在於公文上的機構。
+
 你把終端翻過來，想看背面有沒有別的什麼。沒有。只有你的體溫留在玻璃上，慢慢變成霧。
+
+旁邊有個上班族走過，撐著傘，看了你一眼，又很快移開視線。
+
+那種眼神你看過很多次。不是害怕，是「不想知道」。
 
 雨落上去，把霧洗掉。
 
@@ -4809,13 +4817,19 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 
 不是變形。是生長。
 
+空氣裡的雨珠在他手邊偏了半公分，像被看不見的磁鐵推開。那是魔素被覆寫的痕跡——你在新聞裡看過一次，只有一次。
+
 女人沒有尖叫。
 
 她的喉嚨已經發不出聲音了。你看見她的腳尖在地上刮，刮出一小道白痕。
 
-男人的手腕上有一圈紅光。和你的終端一模一樣，連跳動的頻率都一樣。
+男人的手腕上有一圈紅光，和你的終端一模一樣，連跳動的頻率都一樣。
 
 ——他也是超越者。
+
+終端彈出一行極小的字：「目標 Level 3。你的 Level：不詳。」
+
+不詳。這個詞比三更可怕。
 
 雨打在你後頸。你數著自己的呼吸，數到第四下才發現，自己一直沒有退。
 
@@ -4825,7 +4839,7 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 
 來電顯示：澪。
 
-你盯著螢幕看了很久，久到鈴聲停了，隔兩秒又響起來。終端沒有禁止接聽，只禁止說出真相。
+你盯著螢幕看了很久，久到鈴聲停了，隔兩秒又響起來。終端沒有禁止接聽，只禁止說出真相——它的麥克風一直亮著一個很小的紅點。
 
 「哥。」
 
@@ -4843,11 +4857,17 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 
 她在電話那頭笑了一聲，很短。「哥，你連做夢都很沒出息。」
 
-你聽見她那邊有人翻身，床架吱了一聲。然後她把聲音壓低：
+你聽見她那邊有人翻身，床架吱了一聲。然後她把聲音壓低，低到你幾乎要貼緊螢幕：
 
 「你什麼時候回來？」
 
-雨打在窗上，一下一下，很規律。你聽著，忽然覺得自己可以就這樣聽下去，聽到天亮。`,convenience_store:`凌晨四點，你走進街角的便利商店。
+雨打在窗上，一下一下，很規律。終端的紅點還在亮。
+
+你忽然覺得，只要自己一直聽下去，這通電話就不會結束，那個紅點就永遠只是紅點。
+
+「很快。」你說。
+
+掛斷之後，你在浴室的水聲裡站了很久，才發現自己在說謊這件事上，已經越來越熟練。`,convenience_store:`凌晨四點，你走進街角的便利商店。
 
 自動門的聲音大得嚇人，像有人在耳邊撕開一張紙。
 
@@ -4855,11 +4875,17 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 
 「你怎麼會在這裡？」
 
-是老朋友。你們小時候一起在河堤放過煙火，一起被警察送回家，後來各自走散。他現在穿著店長的藍色圍裙，名牌歪在一邊，寫著「見習」。
+是佐倉大地。你們小時候一起在河堤放過煙火，一起被警察送回家，後來各自走散。他現在穿著店長的藍色圍裙，名牌歪在一邊，寫著「見習」。
 
 電視正在播昨晚的連續殺人案。主播說，警方不排除有「特殊能力者」涉案——這五個字她唸得特別慢，像怕咬到舌頭。
 
-他把音量轉小，眼睛卻沒有離開螢幕。
+畫面下方跑著一行廣告字幕：財團Z・六型化合物，門市同步販售。
+
+貨架上真的擺著，淡紅色的液體，一瓶兩百八十圓。
+
+你把視線移開。
+
+大地把音量轉小，眼睛卻沒有離開螢幕。
 
 「你最近晚上不要一個人走。」他說。
 
@@ -4867,15 +4893,19 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 
 「你也小心。」
 
-他愣了一下，好像想問你為什麼這樣講。但最後只是點頭，把找零放在你掌心，多放了一顆糖。`,shiratori_invite:`終端收到一則沒有寄件人的訊息。
+他愣了一下，好像想問你為什麼這樣講。但最後只是點頭，把找零放在你掌心，多放了一顆糖。
+
+糖果包裝上印著一隻舉著拳頭的貓。`,shiratori_invite:`終端收到一則沒有寄件人的訊息。
 
 「今晚十一點，常夜大樓頂樓。帶上你的刻印，或你的命。」
 
 署名是白鳥理世。
 
-你查了這個名字。三筆新聞，兩筆是失蹤案，一筆是慈善拍賣。照片裡她穿著白裙，對著鏡頭笑，像是知道鏡頭後面有人在看她。
+你查了這個名字。三筆新聞：兩筆是失蹤案，一筆是慈善拍賣。照片裡她穿白裙，對著鏡頭笑，像是知道鏡頭後面有人在看她。
 
 頂樓鋪著紅毯，被雨水泡得發黑。十幾個超越者站在雨裡，沒有人撐傘——不是不怕濕，是不想讓別人以為自己需要保護。
+
+有人在角落交換終端，有人在數自己手腕上的傷。
 
 白鳥坐在唯一的椅子上，白色狐狸面具推到耳邊。
 
@@ -4885,7 +4915,13 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 
 她停了一下，讓這句話在雨裡站穩。
 
-「而你們每一個人，都是商品。」`,kurokawa_massacre:`常夜中央通的監視器同時黑了十二秒。
+「而你們每一個人，都是商品。」
+
+有人笑出聲。笑聲在頂樓繞了一圈，沒有人接。
+
+你注意到她身後站著兩個黑衣人，手腕上沒有紅光。
+
+他們不是超越者。他們是買家。`,kurokawa_massacre:`常夜中央通的監視器同時黑了十二秒。
 
 十二秒後，街上多了九具屍體。
 
@@ -4897,6 +4933,12 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 
 「處理中」，用的是進行式。
 
+你蹲在騎樓的柱子後面，數著他還站著幾秒。十七秒。他等監視器恢復，才慢慢走開。
+
+這不是失控。
+
+這是行程表上的一格。
+
 你忽然理解了一件事：這不是獵殺。
 
 這是廣告。`,ink_rain:`你在走路，卻突然發現雨是黑色的。
@@ -4906,6 +4948,8 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 整條街的牆面都在滲出黑色的字，密密麻麻，寫滿同一個名字。有些字被雨水拖出長長的尾巴，像還沒乾就被人擦過。
 
 你的名字。
+
+路燈下的水窪裡，那些字開始彼此覆蓋、修改，像有人在很遠的地方重新排版。
 
 然後你看見自己的手。
 
@@ -4923,7 +4967,7 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 
 箱子裡只能拿一樣東西。你蹲下來看了很久，像在超市挑一個晚餐。
 
-最後你選了最沒用的一樣。你自己也說不清為什麼。
+最後你選了最沒用的一樣。你自己也說不清為什麼——也許因為它是唯一不需要理由的。
 
 遠方的港口響起汽笛，長長的一聲，接著是貨櫃落地的悶響。
 
@@ -4932,6 +4976,8 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 只有你的人生，被按下了倒數。`,tetsu_dead:`你在第七號碼頭找到鐵十兵衛。
 
 他坐在貨櫃旁邊，眼睛睜著，胸口有一個乾淨的圓洞。乾淨得不像傷口，像有人替他開了一扇窗。
+
+他的手還握著一截斷掉的鐵鍊。鏈子上有刻痕，一道一道，像在算日子。
 
 終端上，他的代號已經變灰。
 
@@ -4967,7 +5013,11 @@ ${n.endingOnLoss?"你被神田隼人制伏了。":"你勉強保住一口氣，�
 
 會場安靜了兩秒，然後是二十幾支麥克風同時往前伸的聲音。
 
-跑馬燈從畫面下方滑過：神田隼人，十七歲。Homo sapiens。
+跑馬燈從畫面下方滑過：神田隼人，十七歲。無顯現。Homo sapiens。
+
+有記者在推文裡寫：上一個被這樣形容的人，是劉千軍。
+
+那條推文五分鐘後被刪了。
 
 記者會結束後，網路上開始流傳另一個名字。
 
